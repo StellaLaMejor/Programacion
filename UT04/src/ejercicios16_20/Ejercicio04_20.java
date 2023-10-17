@@ -13,13 +13,14 @@ public class Ejercicio04_20 {
 		int n1= sc.nextInt();
 		System.out.print("Intruduce otro número: ");
 		int n2= sc.nextInt();
-		System.out.print("Qué operación quieres hacer: "
+		System.out.print("Operaciones disponibles: "
 						+ "\n \t SUMAR"
 						+ "\n \t RESTAR"
 						+ "\n \t MULTIPLICAR"
-						+ "\n \t DIVIDIR");
+						+ "\n \t DIVIDIR\n");
 		
-		String operacion = sc.nextLine();
+		System.out.println("\n¿Qué operación quieres hacer? ");
+		String operacion = sc.next();
 		
 		if (!operacion.equalsIgnoreCase("sumar") && !operacion.equalsIgnoreCase("restar")
 				&& !operacion.equalsIgnoreCase("restar") && !operacion.equalsIgnoreCase("multiplicar")
