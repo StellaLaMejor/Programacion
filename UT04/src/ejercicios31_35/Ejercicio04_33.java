@@ -6,7 +6,7 @@ public class Ejercicio04_33 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+
 		/*
 		 * Escribe un programa que diga si un número introducido por teclado es o no
 		 * primo. Un número primo es aquel que sólo es divisible entre él mismo y la
@@ -15,29 +15,35 @@ public class Ejercicio04_33 {
 		 * con probar con los números desde 2 hasta la raíz cuadrada del número que
 		 * estamos probando.
 		 */
-		
-		
-//		ESTÁ SIN TERMINAR
-		
-		Scanner sc= new Scanner (System.in);
-		
-		
+
+		Scanner sc = new Scanner(System.in);
+
 		System.out.println("Indica un número: ");
-		int num= sc.nextInt();
-		
-		double raiz= Math.sqrt(num);
-		int i= 2;
-		
-		while((num%num==0 && num%1==0)|| num==2 || num==3 || num>1)
+		int num = sc.nextInt();
+
+		int raiz = (int) Math.sqrt(num);
+
+		boolean esDivisiblePorAlguno = false;
+
+		for (int i = 2; i <= raiz && !esDivisiblePorAlguno; i++) 
 		{
-			for(;i <= raiz;i++)
+			// Comprobar si el número es divisible por i. Si lo es, no es primo, así que
+			// hago que esDivisiblePorAlguno sea true. 
+			if (num%i==0)
 			{
-				System.out.printf("El número %d es primo.", num);
-			}	
+				esDivisiblePorAlguno= true;
+			}
 		}
 		
-		System.out.printf("El número %d no es primo.", num);
-
+		if(num<=1 ||esDivisiblePorAlguno)
+		{
+				System.out.printf("El número %d no es primo.", num);
+		}
+		else
+		{
+			System.out.printf("El número %d es primo.", num);	
+		}
+		
 	}
 
 }
