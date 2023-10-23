@@ -9,47 +9,49 @@ public class Ejercicio04_35 {
 		/*
 		 * Realizar un ejemplo de menú, donde podemos escoger las distintas opciones
 		 * hasta que seleccionamos la opción de “Salir”. El menú podría ser algo similar
-		 * a esto: 
-		 * 1. Opción A 
-		 * 2. Opción B 
-		 * 3. Opción C 
-		 * 4. Opción D 
-		 * 9. Salir
-		 * Cuando elusuario elige una opción, el programa mostrará “Se ha elegido A“, o 
-		 * “Se ha elegido B”, etc. Cuando elija la opción “Salir” el programa mostrará 
-		 * “Gracias por usar este menú sin utilidad”.
+		 * a esto: 1. Opción A 2. Opción B 3. Opción C 4. Opción D 9. Salir Cuando
+		 * elusuario elige una opción, el programa mostrará “Se ha elegido A“, o “Se ha
+		 * elegido B”, etc. Cuando elija la opción “Salir” el programa mostrará “Gracias
+		 * por usar este menú sin utilidad”.
 		 */
-		
-		Scanner sc= new Scanner (System.in);
-		
-		System.out.println("Elige una opción: \n1. Opción A\n2. Opción B\n3. Opción C \n4. Opción D\n9. Salir  " );
-		String respuesta= sc.nextLine();
-		
-		if (respuesta.equalsIgnoreCase("a")|| respuesta.equals("1"))
-		{
-			System.out.println("Se ha elegido la opción A.");
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Elige una opción: " + """
+
+				1. Opción A
+				2. Opción B
+				3. Opción C
+				4. Opción D
+				9. Salir""");
+
+		String respuesta = sc.nextLine();
+
+		while (!respuesta.equals("9") && !respuesta.equalsIgnoreCase("salir")) {
+			if (respuesta.equalsIgnoreCase("a") || respuesta.equals("1")) {
+				System.out.println("Se ha elegido la opción A.");
+			} else if (respuesta.equalsIgnoreCase("b") || respuesta.equals("2")) {
+				System.out.println("Se ha elegido la opción B.");
+			} else if (respuesta.equalsIgnoreCase("c") || respuesta.equals("3")) {
+				System.out.println("Se ha elegido la opción C.");
+			} else if (respuesta.equalsIgnoreCase("d") || respuesta.equals("4")) {
+				System.out.println("Se ha elegido la opción D.");
+			} else {
+				System.out.println("Esta opción no es correcta.");
+			}
+			System.out.println("Elige una opción: " + """
+
+					1. Opción A
+					2. Opción B
+					3. Opción C
+					4. Opción D
+					9. Salir""");
+
+			respuesta = sc.nextLine();
 		}
-		else if (respuesta.equalsIgnoreCase("b")|| respuesta.equals("2"))
-		{
-			System.out.println("Se ha elegido la opción B.");
-		}
-		else if (respuesta.equalsIgnoreCase("c")|| respuesta.equals("3"))
-		{
-			System.out.println("Se ha elegido la opción C.");
-		}
-		else if (respuesta.equalsIgnoreCase("d")|| respuesta.equals("4"))
-		{
-			System.out.println("Se ha elegido la opción D.");
-		}
-		else if (respuesta.equalsIgnoreCase("salir")|| respuesta.equals("9"))
-		{
+		if (respuesta.equalsIgnoreCase("salir") || respuesta.equals("9")) {
 			System.out.println("Gracias por usar este menú sin utilidad.");
 		}
-		else
-		{
-			System.out.println("Esta opción no es correcta.");
-		}
-
 	}
 
 }
