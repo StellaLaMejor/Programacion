@@ -27,12 +27,19 @@ public class Ejercicio04_38 {
 
 		System.out.printf("Introduce una frase: ");
 		String frase= sc.nextLine();
-		
+		char vocal;
+		int contador =0;
 		
 		for (int i = 0; i < frase.length(); i++) 
 		{
-			
+		   vocal= Character.toLowerCase(frase.charAt(i));
+		   
+		   if(vocal == 'a' ||vocal == 'e' ||vocal == 'i' || vocal == 'o' ||vocal == 'u' ||vocal == 'á' ||vocal == 'é' ||vocal == 'í' ||vocal == 'ó' ||vocal == 'ú' ||vocal == 'ü') 
+		   {
+			   contador++;
+		   }
 		}
+		 System.out.printf("Has puesto %d vocales.", contador);
 		
 	}
 
