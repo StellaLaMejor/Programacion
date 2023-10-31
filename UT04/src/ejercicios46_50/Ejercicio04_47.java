@@ -9,12 +9,24 @@ public class Ejercicio04_47 {
 	
 	private static int numerito (int numeroUsuario)
 	{
+		int veces=0;
 		
+		if(numeroUsuario==0)
+		{
+			return 0;
+		}
+		while(numeroUsuario>0)
+		{
+			numeroUsuario= numeroUsuario/10;
+			veces++;
+		}
+		return veces;
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+	System.out.println(numerito(456));	
 	}
 
 }
