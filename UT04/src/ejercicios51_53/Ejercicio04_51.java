@@ -32,7 +32,7 @@ caso en que sean correctos.
     sc.close();
  	}
 
- 	private static int pedirNumero(Scanner sc, String texto, int limiteInferiorInclusivo, int limiteSuperiorExclusivo)
+ 	public static int pedirNumero(Scanner sc, String texto, int limiteInferiorInclusivo, int limiteSuperiorExclusivo)
  	{
  		if(limiteInferiorInclusivo>= limiteSuperiorExclusivo || limiteSuperiorExclusivo<= limiteInferiorInclusivo)
  		{
