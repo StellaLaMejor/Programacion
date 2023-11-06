@@ -5,6 +5,9 @@ import java.util.Scanner;
 public class Ejercicio1B {
 
 	public static void main(String[] args) {
+		
+//		ESTÁ SIN TERMINARRRR AAAAAA
+		 
 /*Crea un programa Java que:
 • Pida al usuario un número entero A
 • Pida al usuario un segundo número entero B
