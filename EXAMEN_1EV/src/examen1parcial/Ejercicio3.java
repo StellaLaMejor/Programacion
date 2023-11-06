@@ -66,7 +66,7 @@ public class Ejercicio3 {
 			System.out.print("Indica el segundo número: ");
 			int segundoNumero= sc.nextInt();
 			
-			int suma= primerNumero+ segundoNumero;
+			int suma= primerNumero+segundoNumero;
 			int restar= primerNumero-segundoNumero;
 			int multiplicar = primerNumero*segundoNumero;
 			double division = 1;
