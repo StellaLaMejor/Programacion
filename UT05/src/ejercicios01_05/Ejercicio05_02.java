@@ -12,17 +12,19 @@ public class Ejercicio05_02 {
 
 		Scanner sc= new Scanner(System.in);
 		String[] nombres= new String [CANTIDAD_NOMBRES];
+			
 		
 		for (int i=0;i< nombres.length; i++) 
 		{
 		System.out.println("Introduce un nombre: ");
 		String nombreIntroducido= sc.nextLine();
-		
 		nombres[i]= nombreIntroducido;
-		
-		System.out.printf("Posición %d - %s", i, nombreIntroducido);
 		}
-
+		
+		for (int i = 0; i < nombres.length; i++) 
+		{
+			System.out.printf("Posición %d - %s\n", i, nombres[i]);
+		}
 	}
 
 }
