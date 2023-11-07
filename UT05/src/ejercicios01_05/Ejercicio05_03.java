@@ -19,16 +19,20 @@ Usa al menos los siguientes métodos:
 •	pedirCantidadNumeros. Pide al usuario la cantidad de números que se van a procesar. Se encarga de controlar que es un valor mayor que cero, y de repetir la 
 	pregunta hasta que el usuario introduzca el valor adecuado.
 •	pedirNumeros. Dos opciones:
-o	Recibe un array y pide números al usuario para rellenarlo.
-o	Recibe el tamaño del array que queremos crear, y devuelve un array, de ese tamaño, lleno de números que se preguntan al usuario.
+o		Recibe un array y pide números al usuario para rellenarlo.
+o		Recibe el tamaño del array que queremos crear, y devuelve un array, de ese tamaño, lleno de números que se preguntan al usuario.
 •	mostrarNumerosOrdenNormal. Muestra los números del array en el orden en que se introdujeron.
 •	mostrarNumerosOrdenInverso. Muestra los números del array en el orden inverso al que se introdujeron.
 
 
 */
-		
+		Scanner sc= new Scanner (System.in);
 	 
+		int [] numeritos = pedirNumeros(sc, pedirCantidadNumeros(sc));
 		
+		mostrarNumerosOrdenNormal(numeritos);
+		mostrarNumerosOrdenInverso(numeritos);		
+	
 	}
 
 	private static int pedirCantidadNumeros (Scanner sc)
@@ -58,6 +62,32 @@ o	Recibe el tamaño del array que queremos crear, y devuelve un array, de ese ta
 		}
 		return arrayCompleta;
 	}
+	
+	private static void mostrarNumerosOrdenNormal (int [] arrayCompleta)
+	{
+		for (int i = 0; i < arrayCompleta.length; i++) 
+		{
+			System.out.println("Los números en orden normal son: "+arrayCompleta[i]);
+		}
+		
+	}
+	
+	private static void mostrarNumerosOrdenInverso (int[] arrayCompleta)
+	{
+		for (int i = arrayCompleta.length-1; i >= 0; i--) 
+		{
+		System.out.println("Los números en orden inverso son: "+ arrayCompleta[i]);	
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
 
 
