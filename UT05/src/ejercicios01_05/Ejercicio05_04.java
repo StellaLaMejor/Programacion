@@ -18,7 +18,7 @@ o	Recibe el tamaño del array que queremos crear, y devuelve un array, de ese ta
 	Recomendación: para simplificar este método, puedes llamar al método calcularSuma
 */
 		
-		int[] tamanioArray= new int [2];
+		int[] tamanioArray= new int [4];
 				
 		tamanioArray= array(tamanioArray);
 		

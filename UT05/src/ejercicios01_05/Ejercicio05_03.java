@@ -55,9 +55,8 @@ o		Recibe el tamaño del array que queremos crear, y devuelve un array, de ese t
 		for (int i = 0; i < arrayCompleta.length; i++) 
 		{
 			System.out.print("Introduce un número: ");
-			int numero= sc.nextInt();
 			
-			arrayCompleta[i]= numero ;
+			arrayCompleta[i]=  sc.nextInt(); ;
 			
 		}
 		return arrayCompleta;
