@@ -21,42 +21,29 @@ public class Ejercicio05_07 {
 		for (int i = 0; i < numerosRandom.length; i++) 
 		{
 			numerosRandom[i]=rdm.nextInt(100);
-			System.out.println("El número "+ numerosRandom[i]+ esPrimo(numerosRandom[i]));
+			System.out.println("El número "+ numerosRandom[i]+ esPrimo(numerosRandom[i])+ "y está en la posición "+ i);
 		}
 	}
 	
 	private static String esPrimo (int numero)
 	{
-		boolean primo= false;
-		int noPrimo=0;
-		int siPrimo=0;
+		double raiz= Math.sqrt(numero);
 		
 		for (int i = 0; i < numero; i++) 
 		{
-			double raiz= Math.sqrt(numero);
 			
 			if(numero % 2 == 0 || numero % raiz == 0 ||numero <=1)
 			{
-				primo=false;
-				noPrimo++;
+
+				return " no es primo ";
+				
 			}
 			else
 			{
-				primo= true;
-				siPrimo++;
+				return " es primo ";
 			}
 		}
-		
-		if(primo==true)
-		{
-			String sSiPrimo= String.valueOf(siPrimo);
-			return " el número es primo y está en la posición: "+sSiPrimo;
-		}
-		else
-		{
-			String nNoPrimo= String.valueOf(noPrimo);
-			return " el número no es primo y está en la posición: "+ nNoPrimo;
-		}
+		return "";
 	}
 
 }
