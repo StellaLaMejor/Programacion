@@ -13,7 +13,6 @@ public class Ejercicio05_05 {
 
 		Scanner sc= new Scanner (System.in);
 		
-		int[] numeros= new int[4];
 		
 		for (int i = 0; i < numeros.length; i++) 
 		{
