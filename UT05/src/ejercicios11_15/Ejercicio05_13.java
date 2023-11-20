@@ -30,8 +30,8 @@ public class Ejercicio05_13 {
 	100 números distintos. Si todos aparecen la misma cantidad de veces cada uno debería aparecer 50000/100 veces = 500 veces.
 */
 		
-//		Sin terminarrr
-		vecesRepetidas(CANTIDAD_NUMEROS);
+		int[] veces =vecesRepetidas(CANTIDAD_NUMEROS);
+
 		
 	}
 	
@@ -41,7 +41,7 @@ public class Ejercicio05_13 {
 		
 		for (int i = 0; i < arrayRandom.length; i++) 
 		{
-			arrayRandom[i]= (int) (Math.random()* (NUMERO_MAX-NUMERO_MIN)+NUMERO_MIN);;
+			arrayRandom[i]= (int) (Math.random()* (NUMERO_MAX-NUMERO_MIN+1)+NUMERO_MIN);;
 			System.out.print(arrayRandom[i]+ " ");
 		}
 		System.out.println("\n");
@@ -53,6 +53,7 @@ public class Ejercicio05_13 {
 	{
 		int [] contador= new int[NUMERO_MAX+1];
 		int [] numeroRandom=crearNumerosRandom(cantidad);
+
 	
 		for (int i = 0; i < numeroRandom.length; i++) 
 		{
@@ -61,10 +62,35 @@ public class Ejercicio05_13 {
 				contador[numAleatorioActual]++;
 			
 		}
+		
+		int maxApariciones = contador[0];
+		int minApariciones = contador[0];
+		int numeroMas=0;
+		int numeroMenos=0;
+	
 		for (int i = 0; i < contador.length; i++) 
 		{
-			System.out.println("El número= "+i+ " aparece= "+ contador[i]);
+			System.out.println("El número= "+ i+ " aparece= "+ contador[i]);	
 		}
+
+		for (int i = 0; i < contador.length; i++) 
+		{
+            if (contador[i] > maxApariciones) 
+            {
+                maxApariciones = contador[i];
+                numeroMas=i;
+            }
+            if (contador[i] < minApariciones) 
+            {
+                minApariciones = contador[i];
+                numeroMenos=i;
+            }
+        }
+		System.out.println("");
+
+        System.out.println("El número que ha aparecido más veces es: " + numeroMas+ " que ha aparcido: "+ maxApariciones+ " veces.");
+        System.out.println("El número que ha aparecido menos veces es: " + numeroMenos+ " que ha aparcido: "+ minApariciones+ " veces.");
+	
 		return contador;
 	}
 
