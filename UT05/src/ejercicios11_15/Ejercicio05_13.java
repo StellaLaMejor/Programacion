@@ -70,7 +70,7 @@ public class Ejercicio05_13 {
 	
 		for (int i = 0; i < contador.length; i++) 
 		{
-			System.out.println("El número= "+ i+ " aparece= "+ contador[i]);	
+			System.out.println("El número= "+ i + " aparece= "+ contador[i]);	
 		}
 
 		for (int i = 0; i < contador.length; i++) 
