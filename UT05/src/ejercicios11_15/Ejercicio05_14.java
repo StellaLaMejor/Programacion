@@ -32,7 +32,8 @@ Para hacerlo:
 	o	Recibe dos arrays, uno con el conjunto de números que buscamos (el array de números que ha cargado el usuario) y otro con el conjunto de 
 		números entre los que queremos buscar (el array de aleatorios).
 	o	Devuelve un array de boolean del mismo tamaño que el array de números buscados (cargados por el usuario), de forma que en cada posición del
-	 array devuelto aparece true si el número en la misma posición del array de números del usuario aparece en alguna posición del array de aleatorios, y false en caso contrario.
+	 array devuelto aparece true si el número en la misma posición del array de números del usuario aparece en alguna posición del array de aleatorios, 
+	 y false en caso contrario.
 •	Crear un método “mostrarEncontrados” que:
 o	Recibe dos arrays: 
 		El array de números cargado por el usuario
@@ -77,5 +78,29 @@ o	Muestra, para cada número que introdujo el usuario, si apareció o no en el a
 			numeros[i]= rdm.nextInt(min, max+1);
 		}
 		return numeros;
+	}
+	
+	private static boolean [] buscarNumeros ( int [] arrayUsuario, int [] arrayRandom)
+	{
+		boolean [] encontrados = new boolean [arrayUsuario.length];
+		for (int i = 0; i < encontrados.length; i++) 
+		{
+			int numeroUsuario= arrayUsuario[i];
+			int numeroRandom= arrayRandom[i];
+			
+			if(numeroUsuario==numeroRandom)
+			{
+				encontrados[i]= true;
+			}
+			else
+			{
+				
+			}
+			
+			
+			
+		}
+		
+		
 	}
 }
