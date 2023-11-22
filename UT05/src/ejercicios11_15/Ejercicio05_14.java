@@ -4,6 +4,10 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Ejercicio05_14 {
+	
+	final static int CANTIDAD=25;
+	final static int MAX=100;
+	final static int MIN= 1;
 
 	public static void main(String[] args) {
 /*Crear un programa que:
@@ -40,8 +44,13 @@ o	Recibe dos arrays:
 		El array de boolean indicando si los números del usuario se encontraron en el array de aleatorios.
 o	Muestra, para cada número que introdujo el usuario, si apareció o no en el array de aleatorios.
 */
-
-	}
+		Scanner sc= new Scanner(System.in);
+		
+		int [] numerosUsuario= pedirNumerosAUsuario(sc, CANTIDAD, MIN, MAX);
+		int [] nuemrosRandom= generarNumerosAleatorios(CANTIDAD, MIN, MAX);
+		boolean [] hayNumeros= buscarNumeros(numerosUsuario, nuemrosRandom);
+		mostrarEncontrados(numerosUsuario, hayNumeros);
+	} 
 
 	private static int pedirNumero (Scanner sc, int min, int max)
 	{
@@ -80,27 +89,32 @@ o	Muestra, para cada número que introdujo el usuario, si apareció o no en el a
 		return numeros;
 	}
 	
-	private static boolean [] buscarNumeros ( int [] arrayUsuario, int [] arrayRandom)
+	private static boolean [] buscarNumeros (int [] arrayUsuario, int [] arrayRandom)
 	{
 		boolean [] encontrados = new boolean [arrayUsuario.length];
-		for (int i = 0; i < encontrados.length; i++) 
+		
+		for (int i = 0; i < arrayUsuario.length; i++) 
 		{
-			int numeroUsuario= arrayUsuario[i];
-			int numeroRandom= arrayRandom[i];
+			encontrados [i]= false; 
 			
-			if(numeroUsuario==numeroRandom)
+			for (int j = 0; j < arrayRandom.length; j++) 
 			{
-				encontrados[i]= true;
+				if (arrayUsuario[i]==arrayRandom[j])
+				{
+					encontrados[i]= true;
+				}
 			}
-			else
-			{
-				
-			}
-			
-			
-			
 		}
+		return encontrados;		
+	}
+	
+	private static void mostrarEncontrados (int [] arrayUsuario, boolean [] arrayBoolean)
+	{
+		System.out.println();
 		
-		
+		for (int i = 0; i < arrayUsuario.length; i++) 
+		{
+			System.out.printf("El número %d ha aparecido en la array Random: %s\n", arrayUsuario[i], arrayBoolean[i]);
+		}
 	}
 }
