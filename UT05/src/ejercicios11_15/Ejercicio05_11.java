@@ -21,10 +21,6 @@ public class Ejercicio05_11 {
 		
 		int[] array = arrayRandom(cantidadNumeros);
 		
-//		for (int i = 0; i < array.length; i++) 
-//		{
-//			System.out.print(array[i]+ " ");
-//		}
 		
 		System.out.println("Introduce un número entre 1000 y 2000: ");
 		int numero= sc.nextInt();
