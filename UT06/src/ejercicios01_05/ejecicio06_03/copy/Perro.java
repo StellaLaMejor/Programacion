@@ -1,4 +1,4 @@
-package ejercicios01_04.ejecicio06_03.copy;
+package ejercicios01_05.ejecicio06_03.copy;
 
 public class Perro {
 	public static final int TUMBADO = 1;

@@ -1,4 +1,4 @@
-package ejercicios01_04.ejecicio06_03.copy;
+package ejercicios01_05.ejecicio06_03.copy;
 
 public class Programa {
 
@@ -21,6 +21,9 @@ public class Programa {
 //				Pérdida de peso = tiempo de juego / 7 (división entera)
 //	En el programa principal, añade llamadas a jugar y a comer, para comprobar que aparecen los mensajes adecuados. También
 //	añade sentencias para mostrar el peso del perro cada vez que hace algunas de las dos cosas.
+		
+		FALTA MEDIO WORD POR HACER (ESTE EJERCICIO YA ESTÁ HECHO)
+		
 		Perro perro = new Perro();
 		
 		mostrarPerro(perro);
