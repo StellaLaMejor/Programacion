@@ -1,9 +1,7 @@
-package ejercicios01_05.ejecicio06_03.copy;
+package ejercicios01_05.ejecicio06_03;
 
 public class Perro {
-	public static final int TUMBADO = 1;
-	public static final int SENTADO = 2;
-	public static final int DE_PIE = 3;
+
 	private static final int MAX_COMIDA_GR = 200;
 	private static final int MIN_COMIDA_GR = 0;
 	private static final int MAX_MINUTOS_JUEGO = 10;
@@ -13,7 +11,7 @@ public class Perro {
 	private String propietario;
 	private int edadAnios;
 	private double pesoKg;
-	private int posicion = SENTADO;
+
 	public String getNombre() {
 		return nombre;
 	}
@@ -44,9 +42,7 @@ public class Perro {
 	public void setPesoKg(double pesoKg) {
 		this.pesoKg = pesoKg;
 	}
-	public int getPosicion() {
-		return posicion;
-	}
+
 	public void comer(int cantidadComidaGr) {
 		if (cantidadComidaGr > MAX_COMIDA_GR) {
 			cantidadComidaGr = MAX_COMIDA_GR;
