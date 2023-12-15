@@ -1,5 +1,7 @@
 package ejercicios10_10;
 
+import org.w3c.dom.css.Rect;
+
 public class Rectangulo {
 
 	private int base;
@@ -52,7 +54,27 @@ public class Rectangulo {
 	
 	public boolean esMasAlto (Rectangulo rectangulo2)
 	{
-		return rectangulo2.getAltura() > this.altura;
+		return rectangulo2.getAltura() < this.altura;
+	}
+	public boolean esMasAncho (Rectangulo rectangulo2)
+	{
+		return rectangulo2.getBase() < this.base;
+	}
+	public int compararArea (Rectangulo rectangulo2)
+	{
+		double areaCalculada1= calcularArea();
+		double areaCalculada2= rectangulo2.calcularArea();
+		
+		if (areaCalculada2< areaCalculada1)
+		{
+			return -1;
+		}
+		if (areaCalculada2 > areaCalculada1 || rectangulo2==null)
+		{
+			return 1;
+		}
+		
+		return 0;
 	}
 	
 	
