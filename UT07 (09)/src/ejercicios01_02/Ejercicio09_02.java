@@ -11,84 +11,108 @@ public class Ejercicio09_02 {
 
 	public static void main(String[] args) {
 
-		ESTA BASURA NO FUNCIONA, ARRÉGLALA PERRRA
 		
 		Scanner sc = new Scanner(System.in);
 		Random rdm = new Random();
 
-		System.out.print("Límite inferior A (no puede ser superior a 500): ");
+		System.out.print("Límite inferior A (no puede ser inferior a 0 ni superior a 500): ");
+		String limiteA= sc.nextLine();
+		int limiteAInt= comprobarLimite(sc, limiteA, LIMITE_MIN, LIMITE_MAX);
+		
 
-		int a = Integer.parseInt(sc.nextLine());
-		while (a > LIMITE_MAX) {
-			System.out.println("El número introducido no es un número válido");
-			System.out.print("Introduce un número mayor o igual a 0 como límite inferior: ");
-			a = Integer.parseInt(sc.nextLine());
-		}
+		System.out.print("Límite superior B (no puede ser inferior a 0 ni superior a 500): ");
+		String limiteB= sc.nextLine();
+		int limiteBInt= comprobarLimite(sc, limiteB, LIMITE_MIN, LIMITE_MAX);
 
-		boolean correcto = false;
-
-		while (!correcto) {
-		    try {
-		        a = Integer.parseInt(sc.nextLine());
-		        correcto = true;
-		    } catch (NumberFormatException aA) {
-		        System.out.println("El número introducido no es un número válido");
-		        System.out.print("Introduce un número entero como límite inferior: ");
-		    } catch (Exception aAA) {
-		        System.out.println("Error desconocido.");
-		        System.out.print("Introduce un número entero como límite inferior: ");
-		    }
-		}
-
-		System.out.print("Límite superior B (no puede ser inferior a 0): ");
-
-		correcto = false;
-		int b = 0;
-		while (!correcto) {
-			try {
-				b = Integer.parseInt(sc.nextLine());
-				correcto = true;
-			} catch (NumberFormatException aB) {
-				System.out.println("El número introducido no es un número válido");
-				System.out.print("Introduce un número entero como límite superior: ");
-			} catch (Exception aBB) {
-				System.out.println("Error desconocido.");
-				System.out.print("Introduce un número entero como límite superior: ");
-			}
-		}
-
-		while (b < LIMITE_MIN) {
-
-			System.out.println("El número introducido no es un número válido");
-			System.out.print("Introduce un número menor o igual que 500 como límite superior: ");
-			b = Integer.parseInt(sc.nextLine());
-		}
+		
 
 		int contadorIntentos = -1;
+		
+		while (limiteAInt>=limiteBInt)
+		{
+            System.out.println("El límite superior debe ser mayor que el límite inferior.");
 
-		int numeroRdm = rdm.nextInt(a, b + 1);
+			System.out.printf("Introduce un nuevo límite inferior: ");
+			limiteAInt= comprobarInt(sc.nextLine(),sc);
+			
+			System.out.printf("Introduce un nuevo límite superior: ");
+			limiteBInt= comprobarInt(sc.nextLine(),sc);
+		}
 
-		System.out.printf("Introduce un número entre %d y %d: ", a, b);
+		int numeroRdm = rdm.nextInt(limiteAInt, limiteBInt + 1);
+
+		System.out.printf("Introduce un número entre %d y %d: ", limiteAInt, limiteBInt);
 		int adivinacion = -1;
 
-		for (; adivinacion != numeroRdm; contadorIntentos++) {
+        while (adivinacion != numeroRdm) {
 			try {
-				System.out.print("Vuelve a intentarlo: ");
 				adivinacion = Integer.parseInt(sc.next());
+                contadorIntentos++;
 
-				if (adivinacion < a || adivinacion > b) {
+				if (adivinacion < limiteAInt || adivinacion > limiteBInt) {
 					System.out.println("El número está fuera de los límites.");
 				} else if (adivinacion < numeroRdm) {
-					System.out.println("El número es menor.");
-				} else {
-					System.out.println("El número es mayor.");
+					System.out.println("El número random es mayor.");
+				} else if(adivinacion>numeroRdm) {
+					System.out.println("El número random es menor.");
 				}
 			} catch (NumberFormatException f) {
 				System.out.println("El número introducido no es un número válido");
 				}
-
 		}
+		
+		System.out.printf("El número %d es correcto.\n", adivinacion);
+		System.out.printf("Te ha llevado %d intentos averiguarlo.", contadorIntentos);
+	}
+	
+	public static int comprobarInt (String intA, Scanner sc)
+	{	
+		int limiteA=0;
+		boolean correcto = false;
+		int contador=0;
+		
+		while (!correcto) {
+		    try {
+		    	if (contador==0)
+		    	{
+		    		limiteA= Integer.parseInt(intA);
+		    	}
+		    	else
+		    	{
+		    		limiteA= Integer.parseInt(sc.nextLine());
+		    	}
+		        correcto = true;
+		    } catch (NumberFormatException a) {
+		        System.out.println("El número introducido no es un número válido");
+		        System.out.print("Introduce un número entero como límite inferior: ");
+		        
+		    } catch (Exception b) {
+		        System.out.println("Error desconocido.");
+		        System.out.print("Introduce un número entero como límite inferior: ");
+		    }
+		    contador++;
+		}
+	    return limiteA;
+	}
+	
+	public static int comprobarLimite (Scanner sc, String limiteString,  int LIMITE_MIN, int LIMITE_MAX)
+	{
+		int limiteInt= comprobarInt(limiteString,sc);
 
+		while (!(limiteInt >= LIMITE_MIN && limiteInt <= LIMITE_MAX)) {
+			System.out.println("El número introducido no es un número válido");
+			System.out.print("Introduce un número mayor o igual a 0 y menor o igual a 500 como límite inferior: ");
+			
+			try {
+				limiteInt = Integer.parseInt(sc.nextLine());
+			}
+			catch (Exception a)
+			{
+				limiteString=String.valueOf(limiteInt);
+				limiteInt= comprobarInt(limiteString,sc);
+			}
+		}
+		return limiteInt;
 	}
 
 }
