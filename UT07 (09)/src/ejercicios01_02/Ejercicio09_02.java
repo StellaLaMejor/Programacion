@@ -73,22 +73,19 @@ public class Ejercicio09_02 {
 		
 		while (!correcto) {
 		    try {
-		    	if (contador==0)
-		    	{
-		    		limiteA= Integer.parseInt(intA);
-		    	}
-		    	else
-		    	{
-		    		limiteA= Integer.parseInt(sc.nextLine());
-		    	}
+		    	limiteA= Integer.parseInt(intA);
 		        correcto = true;
+		        
 		    } catch (NumberFormatException a) {
 		        System.out.println("El número introducido no es un número válido");
 		        System.out.print("Introduce un número entero como límite inferior: ");
+		        intA= sc.nextLine();
 		        
 		    } catch (Exception b) {
 		        System.out.println("Error desconocido.");
 		        System.out.print("Introduce un número entero como límite inferior: ");
+		        intA= sc.nextLine();
+
 		    }
 		    contador++;
 		}
