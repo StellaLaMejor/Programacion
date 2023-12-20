@@ -69,7 +69,6 @@ public class Ejercicio09_02 {
 	{	
 		int limiteA=0;
 		boolean correcto = false;
-		int contador=0;
 		
 		while (!correcto) {
 		    try {
@@ -87,7 +86,7 @@ public class Ejercicio09_02 {
 		        intA= sc.nextLine();
 
 		    }
-		    contador++;
+
 		}
 	    return limiteA;
 	}
