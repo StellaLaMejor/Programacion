@@ -9,7 +9,7 @@ public class Programa {
 	public static void main(String[] args) {
 		
 		Faker fake = new Faker ();
-		sinterminar
+
 		
 		ProductoFresco pF= new ProductoFresco(LocalDate.of(2023, 04, 01), 54654564, LocalDate.of(2024, 01, 1), "ESPAÑA");
 		System.out.println(pF.toString());
