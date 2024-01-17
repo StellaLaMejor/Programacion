@@ -11,7 +11,21 @@ public class Programa {
 	private static final int TAMANIO_ARRAY=2;
 
 	public static void main(String[] args) {
-me falta una parte 
+		Electrodomestico [] electrodomesticos1 = new Electrodomestico[10];
+		
+		electrodomesticos1[0]= new Lavadora();
+		electrodomesticos1[1]= new Television();
+		electrodomesticos1[2]= new Electrodomestico();
+		electrodomesticos1[3]= new Lavadora();
+		electrodomesticos1[4]= new Television();
+		electrodomesticos1[5]= new Electrodomestico();
+		electrodomesticos1[6]= new Lavadora();
+		electrodomesticos1[7]= new Television();
+		electrodomesticos1[8]= new Electrodomestico();
+		electrodomesticos1[9]= new Lavadora();
+
+		mostrarTodosLosPrecios(electrodomesticos1);
+
 		Electrodomestico [] electrodomesticos = new Electrodomestico[TAMANIO_ARRAY];
 		
 		for (int i=0; i<electrodomesticos.length;i++) {
@@ -59,7 +73,8 @@ me falta una parte
 				lavadora= new Lavadora();
 				System.out.println(lavadora.toString());
 			}
-			
+
+
 			
 		}
 		Television [] televisiones = new Television[TAMANIO_ARRAY];
@@ -88,12 +103,31 @@ me falta una parte
 				System.out.println(tele.toString());
 			}
 			
+		
+
 			
 		}
 
 	}
 
-	  public static Color generarColorAleatorio() {
+	  private static void mostrarTodosLosPrecios(Electrodomestico[] electrodomesticos1) {
+		for (Electrodomestico electrodomestico : electrodomesticos1) {
+			System.out.println(electrodomestico.getPrecioFinal());
+		}
+		System.out.println();
+	}
+
+	private static double precioMedioL(Lavadora[] lavadoras) {
+		  double suma= 0;
+		  for (int i = 0; i < lavadoras.length; i++) {
+			Lavadora lavadora = lavadoras[i];
+			suma= lavadora.getPrecioFinal()+ suma;
+		}
+		  double precioMedio= suma /lavadoras.length;
+		return precioMedio;
+	}
+
+	public static Color generarColorAleatorio() {
 	        Color[] colores = Color.values();
 	        Random random = new Random();
 	        int indiceAleatorio = random.nextInt(colores.length);
@@ -106,5 +140,16 @@ me falta una parte
 	        int indiceAleatorio = random.nextInt(consumos.length);
 	        return consumos[indiceAleatorio];
 	    }
+	  public static double precioMedio(Television [] tele)
+	  {
+		  double suma= 0;
+		  for (int i = 0; i < tele.length; i++) {
+			Television television = tele[i];
+			suma= television.getPrecioFinal()+ suma;
+		}
+		  double precioMedio= suma /tele.length;
+		return precioMedio;
+		  
+	  }
 	  
 }
