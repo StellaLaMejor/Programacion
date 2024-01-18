@@ -13,7 +13,6 @@ import net.datafaker.Faker;
 
 public class Programa {
 	
-	preguntar al profe por qué se me meten los oficiales en los operarios
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner (System.in);
@@ -56,7 +55,7 @@ public class Programa {
 
 		System.out.println("OFICIAL: ");
 		for (Empleado empleado : empleados) {
-			if (empleado instanceof Oficial )
+			if (empleado.getClass() == Oficial.class)
 			{
 				System.out.println(empleado.toString());
 			}
