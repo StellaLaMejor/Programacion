@@ -1,13 +1,6 @@
-package ejercicios08_10.ejercicio11_08;
+package ejercicios08_10.ejercicio11_10;
 
 import java.util.Random;
-
-import ejercicios08_10.ejercicio11_09.Circulo;
-import ejercicios08_10.ejercicio11_09.Cuadrado;
-import ejercicios08_10.ejercicio11_09.Figura;
-import ejercicios08_10.ejercicio11_09.Rectangulo;
-import ejercicios08_10.ejercicio11_09.Romboide;
-import ejercicios08_10.ejercicio11_09.Triangulo;
 
 public class Programa {
 
@@ -77,4 +70,5 @@ public class Programa {
 			System.out.printf("La figura de la posición %d es un %s y su área es %.2f y su perímetro es %.2f\n", i + 1, getTipoFigura(figura), figura.area(), figura.perimetro());
 		}
 	}
+
 }
