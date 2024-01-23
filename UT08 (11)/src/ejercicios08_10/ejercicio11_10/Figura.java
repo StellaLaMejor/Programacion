@@ -4,10 +4,7 @@ public abstract class Figura {
 
 	private int numLados=0;
 	
-//	public Figura()
-//	{
-//		
-//	}
+
 	public Figura(int numeroLados)
 	{
 		this.numLados=numeroLados;

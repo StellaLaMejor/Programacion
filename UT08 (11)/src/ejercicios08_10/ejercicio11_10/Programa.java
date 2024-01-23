@@ -18,7 +18,7 @@ public class Programa {
 
 	private static Figura figuraAleatoria() {
 		Random rdm = new Random();
-		int numeroRandom = rdm.nextInt(5);
+		int numeroRandom = rdm.nextInt(8);
 		double lado1 = rdm.nextDouble(10) + 1;
 		double lado2 = rdm.nextDouble(10) + 1;
 		double lado3 = rdm.nextDouble(10) + 1;
@@ -41,6 +41,13 @@ public class Programa {
 			return  new Cuadrado(rdm.nextDouble(10) + 1);
 		case 4:
 			return new Rectangulo(rdm.nextDouble(10) + 1, rdm.nextDouble(10) + 1);
+		case 5:
+			return new Rombo(rdm.nextDouble(10) + 1, rdm.nextDouble(10) + 1);
+		case 6:
+			return new PoligonoRegular(rdm.nextInt(5),rdm.nextDouble(10) + 1, rdm.nextDouble(10) + 1);
+		case 7:
+			return new Elipse(rdm.nextDouble(5) + 1, rdm.nextDouble(10) + 1);
+
 		default:
 			return new Romboide(rdm.nextDouble(10) + 1, rdm.nextDouble(10) + 1,
 					rdm.nextDouble(10) + 1);
@@ -60,6 +67,15 @@ public class Programa {
 		}
 		if (f instanceof Romboide) {
 			return "Romboide";
+		}
+		if (f instanceof Rombo) {
+			return "Rombo";
+		}
+		if (f instanceof Elipse) {
+			return "Elipse";
+		}
+		if (f instanceof PoligonoRegular) {
+			return "Polígono Regular";
 		}
 		return "Triángulo";
 	}
