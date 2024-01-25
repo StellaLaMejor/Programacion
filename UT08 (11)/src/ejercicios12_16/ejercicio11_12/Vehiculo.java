@@ -8,5 +8,6 @@ public interface Vehiculo {
 	public abstract void frenar(int cuanto);
 	void acelerar(int cuanto);
 	int getNumPlazas();
+	int getVelocidadActual();
 	
 }

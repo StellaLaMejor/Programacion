@@ -2,24 +2,55 @@ package ejercicios12_16.ejercicio11_12;
 
 public class Moto implements Vehiculo{
 
-	@Override
-	public void frenar(int cuanto) {
-		// TODO Auto-generated method stub
+	private int velocidadActual=0;
+	
+
+	public Moto() {
+		super();
 		
 	}
 
-	@Override
-	public void acelerar(int cuanto) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public int getNumPlazas() {
-		// TODO Auto-generated method stub
-		return 0;
+	public int getVelocidadActual() {
+		return velocidadActual;
 	}
 	
+	public void setVelocidadActual(int velocidadActual) {
+		this.velocidadActual = velocidadActual;
+	}
+	@Override
+	public void frenar (int cuantos)
+	{
+		int velocidad = this.velocidadActual-cuantos;
+		if(velocidad <= 0)
+		{
+			System.out.println("Soy una moto y no puedo frenar más.");
+			this.velocidadActual=0;
+		}
+		else {
+			this.velocidadActual=velocidad;
+		}
+		
+	}
+	@Override
+	public void acelerar (int cuantos)
+	{
+		System.out.println("Soy una moto, puedo acelerar hasta 120 km/h.");
+		int velocidad = this.velocidadActual+cuantos;
+		if(velocidad > 120)
+		{
+			System.out.println("Soy una moto y no puedo acelerar más.");
+			this.velocidadActual=120;
+		}
+		else {
+			this.velocidadActual=velocidad;
+		}
+	}
+
+	@Override
+	public int getNumPlazas ()
+	{
+		return 2;
+	}
 	
 
 }
