@@ -1,4 +1,4 @@
-package ejercicios12_16.ejercicio11_12;
+package ejercicios12_16.ejercicio11_13;
 
 public interface Vehiculo {
 
