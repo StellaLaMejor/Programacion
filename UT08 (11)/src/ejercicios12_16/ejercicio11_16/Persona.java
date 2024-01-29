@@ -1,6 +1,7 @@
 package ejercicios12_16.ejercicio11_16;
 
-public class Persona implements Comparable {
+public class Persona implements Comparable
+{
 
 	private String nombre;
 	private String apellido;
