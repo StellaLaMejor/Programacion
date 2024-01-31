@@ -1,6 +1,6 @@
-package ejercicios17_19.ejercicio11_17.percusion;
+package ejercicios17_19.ejercicio11_18.percusion;
 
-import ejercicios17_19.ejercicio11_17.Instrumento;
+import ejercicios17_19.ejercicio11_18.Instrumento;
 
 public abstract class Percusion extends Instrumento {
 

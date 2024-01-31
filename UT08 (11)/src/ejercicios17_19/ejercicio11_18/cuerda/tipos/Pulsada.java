@@ -1,6 +1,6 @@
-package ejercicios17_19.ejercicio11_17.cuerda.tipos;
+package ejercicios17_19.ejercicio11_18.cuerda.tipos;
 
-import ejercicios17_19.ejercicio11_17.cuerda.Cuerda;
+import ejercicios17_19.ejercicio11_18.cuerda.Cuerda;
 
 public abstract class Pulsada extends Cuerda{
 

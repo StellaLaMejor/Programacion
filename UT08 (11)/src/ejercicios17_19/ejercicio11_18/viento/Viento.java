@@ -1,6 +1,6 @@
-package ejercicios17_19.ejercicio11_17.viento;
+package ejercicios17_19.ejercicio11_18.viento;
 
-import ejercicios17_19.ejercicio11_17.Instrumento;
+import ejercicios17_19.ejercicio11_18.Instrumento;
 
 public abstract class Viento extends Instrumento {
 

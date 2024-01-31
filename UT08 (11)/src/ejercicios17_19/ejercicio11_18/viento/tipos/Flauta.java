@@ -1,7 +1,7 @@
-package ejercicios17_19.ejercicio11_17.viento.tipos;
+package ejercicios17_19.ejercicio11_18.viento.tipos;
 
-import ejercicios17_19.ejercicio11_17.viento.Material;
-import ejercicios17_19.ejercicio11_17.viento.Viento;
+import ejercicios17_19.ejercicio11_18.viento.Material;
+import ejercicios17_19.ejercicio11_18.viento.Viento;
 
 public class Flauta extends Viento{
 

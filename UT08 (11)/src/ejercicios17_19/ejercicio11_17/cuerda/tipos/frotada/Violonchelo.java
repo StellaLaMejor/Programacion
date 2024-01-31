@@ -9,7 +9,7 @@ public class Violonchelo extends Frotada{
 	private static final String NOMBRE_INSTRUMENTO= "violonchelo";
 
 	public Violonchelo (String propietario) {
-		super(propietario, DIFICULTAD, NUM_CUERDAS);
+		super(propietario, DIFICULTAD, NUM_CUERDAS, NOMBRE_INSTRUMENTO);
 	}
 
 	@Override
@@ -23,4 +23,5 @@ public class Violonchelo extends Frotada{
 		System.out.printf("El %s de %s deja de tocar.\n", NOMBRE_INSTRUMENTO, this.getPropietario());		
 	}
 
+	
 }

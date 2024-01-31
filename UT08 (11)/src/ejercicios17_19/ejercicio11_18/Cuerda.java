@@ -1,4 +1,4 @@
-package ejercicios17_19.ejercicio11_17.cuerda;
+package ejercicios17_19.ejercicio11_18;
 
 import ejercicios17_19.ejercicio11_17.Instrumento;
 

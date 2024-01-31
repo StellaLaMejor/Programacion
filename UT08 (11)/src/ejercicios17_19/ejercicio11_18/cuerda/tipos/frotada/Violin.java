@@ -1,14 +1,14 @@
-package ejercicios17_19.ejercicio11_17.cuerda.tipos.pulsada;
+package ejercicios17_19.ejercicio11_18.cuerda.tipos.frotada;
 
-import ejercicios17_19.ejercicio11_17.cuerda.tipos.Pulsada;
+import ejercicios17_19.ejercicio11_18.cuerda.tipos.Frotada;
 
-public class Arpa extends Pulsada {
+public class Violin extends Frotada{
 
-	private static final int DIFICULTAD = 10;
-	private static final int NUM_CUERDAS = 47 ;
-	private static final String NOMBRE_INSTRUMENTO= "arpa";
+	private static final int DIFICULTAD = 9;
+	private static final int NUM_CUERDAS = 4;
+	private static final String NOMBRE_INSTRUMENTO= "violín";
 
-	public Arpa (String propietario) {
+	public Violin(String propietario) {
 		super(propietario, DIFICULTAD, NUM_CUERDAS, NOMBRE_INSTRUMENTO);
 	}
 

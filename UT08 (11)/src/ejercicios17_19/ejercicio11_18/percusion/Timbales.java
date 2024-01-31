@@ -1,4 +1,4 @@
-package ejercicios17_19.ejercicio11_17.percusion;
+package ejercicios17_19.ejercicio11_18.percusion;
 
 public class Timbales extends Percusion{
 

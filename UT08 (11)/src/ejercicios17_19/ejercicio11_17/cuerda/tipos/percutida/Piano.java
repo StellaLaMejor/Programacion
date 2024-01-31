@@ -9,7 +9,7 @@ public class Piano extends Percutida{
 	private static final String NOMBRE_INSTRUMENTO= "piano";
 
 	public Piano (String propietario) {
-		super(propietario, DIFICULTAD, NUM_CUERDAS);
+		super(propietario, DIFICULTAD, NUM_CUERDAS, NOMBRE_INSTRUMENTO);
 	}
 
 	@Override
@@ -22,5 +22,6 @@ public class Piano extends Percutida{
 	public void parar() {
 		System.out.printf("El %s de %s deja de tocar.\n", NOMBRE_INSTRUMENTO, this.getPropietario());		
 	}
+	
 
 }

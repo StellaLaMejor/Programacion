@@ -1,22 +1,24 @@
-package ejercicios17_19.ejercicio11_17;
+package ejercicios17_19.ejercicio11_18;
 
 import java.util.Locale;
 
-import ejercicios17_19.ejercicio11_17.cuerda.tipos.frotada.Violin;
-import ejercicios17_19.ejercicio11_17.cuerda.tipos.frotada.Violonchelo;
-import ejercicios17_19.ejercicio11_17.cuerda.tipos.percutida.Piano;
-import ejercicios17_19.ejercicio11_17.cuerda.tipos.pulsada.Arpa;
-import ejercicios17_19.ejercicio11_17.cuerda.tipos.pulsada.Guitarra;
-import ejercicios17_19.ejercicio11_17.percusion.Pandereta;
-import ejercicios17_19.ejercicio11_17.percusion.Timbales;
-import ejercicios17_19.ejercicio11_17.percusion.Xilofono;
-import ejercicios17_19.ejercicio11_17.viento.tipos.Clarinete;
-import ejercicios17_19.ejercicio11_17.viento.tipos.Flauta;
-import ejercicios17_19.ejercicio11_17.viento.tipos.Trompeta;
-import ejercicios17_19.ejercicio11_17.viento.tipos.Tuba;
+import ejercicios17_19.ejercicio11_18.cuerda.tipos.frotada.Violin;
+import ejercicios17_19.ejercicio11_18.cuerda.tipos.frotada.Violonchelo;
+import ejercicios17_19.ejercicio11_18.cuerda.tipos.percutida.Piano;
+import ejercicios17_19.ejercicio11_18.cuerda.tipos.pulsada.Arpa;
+import ejercicios17_19.ejercicio11_18.cuerda.tipos.pulsada.Guitarra;
+import ejercicios17_19.ejercicio11_18.percusion.Pandereta;
+import ejercicios17_19.ejercicio11_18.percusion.Timbales;
+import ejercicios17_19.ejercicio11_18.percusion.Xilofono;
+import ejercicios17_19.ejercicio11_18.viento.tipos.Clarinete;
+import ejercicios17_19.ejercicio11_18.viento.tipos.Flauta;
+import ejercicios17_19.ejercicio11_18.viento.tipos.Trompeta;
+import ejercicios17_19.ejercicio11_18.viento.tipos.Tuba;
 import net.datafaker.Faker;
 
 public class Programa {
+	
+	Termínalo cochina, te falta entero el 18 por el culo te la entocho
 
 	public static void main(String[] args) {
 

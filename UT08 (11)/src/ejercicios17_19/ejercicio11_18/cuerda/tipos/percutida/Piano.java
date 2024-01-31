@@ -1,14 +1,14 @@
-package ejercicios17_19.ejercicio11_17.cuerda.tipos.pulsada;
+package ejercicios17_19.ejercicio11_18.cuerda.tipos.percutida;
 
-import ejercicios17_19.ejercicio11_17.cuerda.tipos.Pulsada;
+import ejercicios17_19.ejercicio11_18.cuerda.tipos.Percutida;
 
-public class Arpa extends Pulsada {
+public class Piano extends Percutida{
 
-	private static final int DIFICULTAD = 10;
-	private static final int NUM_CUERDAS = 47 ;
-	private static final String NOMBRE_INSTRUMENTO= "arpa";
+	private static final int DIFICULTAD = 7;
+	private static final int NUM_CUERDAS = 230 ;
+	private static final String NOMBRE_INSTRUMENTO= "piano";
 
-	public Arpa (String propietario) {
+	public Piano (String propietario) {
 		super(propietario, DIFICULTAD, NUM_CUERDAS, NOMBRE_INSTRUMENTO);
 	}
 
@@ -22,6 +22,6 @@ public class Arpa extends Pulsada {
 	public void parar() {
 		System.out.printf("El %s de %s deja de tocar.\n", NOMBRE_INSTRUMENTO, this.getPropietario());		
 	}
-
 	
+
 }

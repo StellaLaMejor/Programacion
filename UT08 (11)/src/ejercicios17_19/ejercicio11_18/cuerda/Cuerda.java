@@ -1,6 +1,6 @@
-package ejercicios17_19.ejercicio11_17.cuerda;
+package ejercicios17_19.ejercicio11_18.cuerda;
 
-import ejercicios17_19.ejercicio11_17.Instrumento;
+import ejercicios17_19.ejercicio11_18.Instrumento;
 
 public abstract class Cuerda extends Instrumento{
 	
