@@ -24,9 +24,11 @@ public class Programa {
  
 	public static void main(String[] args) {
 
-		Instrumento[] instrumentos = crearInstrumentos(5);
+		Instrumento[] instrumentos = crearInstrumentos(50);
 		
+        Arrays.sort(instrumentos, Comparator.nullsFirst(Comparator.naturalOrder()));
         Arrays.sort(instrumentos, Comparator.comparing(Instrumento::getPropietario));
+
 
 		tocarInstrumentos(instrumentos);
 		System.out.println();
@@ -34,6 +36,7 @@ public class Programa {
 		System.out.println();
 		System.out.println("El/la que tiene un instrumento con mayor dificultad es: "+ buscarMasDificil(instrumentos));
 		dejarDeTocarInstrumentos(instrumentos);
+		
 		System.out.println();
 		Arrays.sort(instrumentos, Comparator.comparing(Instrumento::getNombreInstrumento)); 
 		afinarInstrumentos(instrumentos);
@@ -42,7 +45,14 @@ public class Programa {
 		System.out.println();
 		Arrays.sort(instrumentos);
 		mostrarInstrumentos(instrumentos);
-		
+		System.out.println();
+		Arrays.sort(instrumentos, Comparator.nullsFirst(new Comparator<Instrumento>(){
+
+			@Override
+			public int compare(Instrumento o1, Instrumento o2) {
+				return o1.getClass().getSimpleName().compareTo(o2.getClass().getSimpleName());
+			}}));
+		mostrarInstrumentos(instrumentos);
 	}
 
 	private static Instrumento[] crearInstrumentos(int numInstrumentos) {

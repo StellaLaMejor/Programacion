@@ -1,6 +1,6 @@
 package ejercicios17_19.ejercicio11_18.cuerda.tipos.frotada;
 
-import ejercicios17_19.ejercicio11_19.cuerda.tipos.Frotada;
+import ejercicios17_19.ejercicio11_18.cuerda.tipos.Frotada;
 
 public class Violin extends Frotada{
 
