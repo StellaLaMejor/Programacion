@@ -1,7 +1,7 @@
-  package ejercicios17_19.ejercicio11_18.cuerda;
+  package ejercicios17_19.ejercicio11_19.cuerda;
 
-import ejercicios17_19.ejercicio11_18.Afinable;
-import ejercicios17_19.ejercicio11_18.Instrumento;
+import ejercicios17_19.ejercicio11_19.Afinable;
+import ejercicios17_19.ejercicio11_19.Instrumento;
 
 public abstract class Cuerda extends Instrumento implements Afinable{
 	
@@ -13,10 +13,8 @@ public abstract class Cuerda extends Instrumento implements Afinable{
 
 	public int getNumeroCuerdas() {
 		return numeroCuerdas;
-		
-		
+		 	
 	}
-
 
 	public Cuerda(String propietario, int dificultad, int numeroCuerdas ,String nombreInstrumento) {
 		super(propietario, dificultad, nombreInstrumento);

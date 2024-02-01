@@ -1,14 +1,14 @@
-package ejercicios17_19.ejercicio11_18.cuerda.tipos.frotada;
+package ejercicios17_19.ejercicio11_19.cuerda.tipos.percutida;
 
-import ejercicios17_19.ejercicio11_19.cuerda.tipos.Frotada;
+import ejercicios17_19.ejercicio11_19.cuerda.tipos.Percutida;
 
-public class Violin extends Frotada{
+public class Piano extends Percutida{
 
-	private static final int DIFICULTAD = 9;
-	private static final int NUM_CUERDAS = 4;
-	private static final String NOMBRE_INSTRUMENTO= "violín";
+	private static final int DIFICULTAD = 7;
+	private static final int NUM_CUERDAS = 230 ;
+	private static final String NOMBRE_INSTRUMENTO= "piano";
 
-	public Violin(String propietario) {
+	public Piano (String propietario) {
 		super(propietario, DIFICULTAD, NUM_CUERDAS, NOMBRE_INSTRUMENTO);
 	}
 
@@ -22,6 +22,6 @@ public class Violin extends Frotada{
 	public void parar() {
 		System.out.printf("El %s de %s deja de tocar.\n", NOMBRE_INSTRUMENTO, this.getPropietario());		
 	}
-
 	
+
 }

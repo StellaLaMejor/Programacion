@@ -1,20 +1,22 @@
-package ejercicios17_19.ejercicio11_18;
+package ejercicios17_19.ejercicio11_19;
 
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Locale;
 
-import ejercicios17_19.ejercicio11_18.cuerda.Cuerda;
-import ejercicios17_19.ejercicio11_18.cuerda.tipos.frotada.Violin;
-import ejercicios17_19.ejercicio11_18.cuerda.tipos.frotada.Violonchelo;
-import ejercicios17_19.ejercicio11_18.cuerda.tipos.percutida.Piano;
-import ejercicios17_19.ejercicio11_18.cuerda.tipos.pulsada.Arpa;
-import ejercicios17_19.ejercicio11_18.cuerda.tipos.pulsada.Guitarra;
-import ejercicios17_19.ejercicio11_18.percusion.Pandereta;
-import ejercicios17_19.ejercicio11_18.percusion.Timbales;
-import ejercicios17_19.ejercicio11_18.percusion.Xilofono;
-import ejercicios17_19.ejercicio11_18.viento.tipos.Clarinete;
-import ejercicios17_19.ejercicio11_18.viento.tipos.Flauta;
-import ejercicios17_19.ejercicio11_18.viento.tipos.Trompeta;
-import ejercicios17_19.ejercicio11_18.viento.tipos.Tuba;
+import ejercicios17_19.ejercicio11_19.cuerda.Cuerda;
+import ejercicios17_19.ejercicio11_19.cuerda.tipos.frotada.Violin;
+import ejercicios17_19.ejercicio11_19.cuerda.tipos.frotada.Violonchelo;
+import ejercicios17_19.ejercicio11_19.cuerda.tipos.percutida.Piano;
+import ejercicios17_19.ejercicio11_19.cuerda.tipos.pulsada.Arpa;
+import ejercicios17_19.ejercicio11_19.cuerda.tipos.pulsada.Guitarra;
+import ejercicios17_19.ejercicio11_19.percusion.Pandereta;
+import ejercicios17_19.ejercicio11_19.percusion.Timbales;
+import ejercicios17_19.ejercicio11_19.percusion.Xilofono;
+import ejercicios17_19.ejercicio11_19.viento.tipos.Clarinete;
+import ejercicios17_19.ejercicio11_19.viento.tipos.Flauta;
+import ejercicios17_19.ejercicio11_19.viento.tipos.Trompeta;
+import ejercicios17_19.ejercicio11_19.viento.tipos.Tuba;
 import net.datafaker.Faker;
 
 public class Programa {
@@ -23,6 +25,9 @@ public class Programa {
 	public static void main(String[] args) {
 
 		Instrumento[] instrumentos = crearInstrumentos(5);
+		
+        Arrays.sort(instrumentos, Comparator.comparing(Instrumento::getPropietario));
+
 		tocarInstrumentos(instrumentos);
 		System.out.println();
 		mostrarInstrumentos(instrumentos);
@@ -30,7 +35,13 @@ public class Programa {
 		System.out.println("El/la que tiene un instrumento con mayor dificultad es: "+ buscarMasDificil(instrumentos));
 		dejarDeTocarInstrumentos(instrumentos);
 		System.out.println();
+		Arrays.sort(instrumentos, Comparator.comparing(Instrumento::getNombreInstrumento)); 
 		afinarInstrumentos(instrumentos);
+		System.out.println();
+		tocarInstrumentos(instrumentos);
+		System.out.println();
+		Arrays.sort(instrumentos);
+		mostrarInstrumentos(instrumentos);
 		
 	}
 

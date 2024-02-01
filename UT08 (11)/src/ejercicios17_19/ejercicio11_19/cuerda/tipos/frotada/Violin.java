@@ -1,4 +1,4 @@
-package ejercicios17_19.ejercicio11_18.cuerda.tipos.frotada;
+package ejercicios17_19.ejercicio11_19.cuerda.tipos.frotada;
 
 import ejercicios17_19.ejercicio11_19.cuerda.tipos.Frotada;
 

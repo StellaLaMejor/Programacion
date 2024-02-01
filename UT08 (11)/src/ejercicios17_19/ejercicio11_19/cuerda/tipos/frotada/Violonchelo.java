@@ -1,14 +1,14 @@
-package ejercicios17_19.ejercicio11_18.cuerda.tipos.frotada;
+package ejercicios17_19.ejercicio11_19.cuerda.tipos.frotada;
 
 import ejercicios17_19.ejercicio11_19.cuerda.tipos.Frotada;
 
-public class Violin extends Frotada{
+public class Violonchelo extends Frotada{
 
 	private static final int DIFICULTAD = 9;
 	private static final int NUM_CUERDAS = 4;
-	private static final String NOMBRE_INSTRUMENTO= "violín";
+	private static final String NOMBRE_INSTRUMENTO= "violonchelo";
 
-	public Violin(String propietario) {
+	public Violonchelo (String propietario) {
 		super(propietario, DIFICULTAD, NUM_CUERDAS, NOMBRE_INSTRUMENTO);
 	}
 

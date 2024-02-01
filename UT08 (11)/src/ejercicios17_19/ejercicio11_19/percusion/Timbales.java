@@ -1,4 +1,4 @@
-package ejercicios17_19.ejercicio11_18.percusion;
+package ejercicios17_19.ejercicio11_19.percusion;
 
 import ejercicios17_19.ejercicio11_18.Afinable;
 
