@@ -27,4 +27,11 @@ public class Rombo extends Figura{
 		return (diagonalMayor*diagonalMenor)/2;
 	}
 
+	@Override
+	public void escalar(double factor) {
+		this.diagonalMayor*=factor;
+		this.diagonalMenor*=factor;
+		
+	}
+
 }

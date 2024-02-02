@@ -2,7 +2,6 @@ package ejercicios20_21.ejercicio11_20;
 
 public class Circulo extends Figura{
 	private static final int NUM_LADOS=0;
-
 	
 	private double radio;
 
@@ -27,5 +26,15 @@ public class Circulo extends Figura{
 	}
 
 
+
+	@Override
+	public void escalar(double factor) {
+
+		this.radio*= factor;
+		
+	}
+
+	
+	
 	
 }

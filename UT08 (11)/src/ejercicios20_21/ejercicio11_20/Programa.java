@@ -6,6 +6,8 @@ public class Programa {
 
 	public static void main(String[] args) {
 
+		hay que hacer un array de escalables y no sé qué mas (todo lo demás vaya)
+		
 		Figura[] arrayFiguras = new Figura[15];
 
 		for (int i = 0; i < arrayFiguras.length; i++) {

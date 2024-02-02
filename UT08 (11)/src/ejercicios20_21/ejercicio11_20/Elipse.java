@@ -3,7 +3,6 @@ package ejercicios20_21.ejercicio11_20;
 public class Elipse extends Figura{
 	private static final int NUM_LADOS=2;
 
-
 	
 	private double semiEjeMenor;
 	private double semiEjeMayor;
@@ -23,5 +22,14 @@ public class Elipse extends Figura{
 	public double area() {
 		return Math.PI*semiEjeMayor*semiEjeMenor;
 	}
+
+
+	@Override
+	public void escalar(double factor) {
+		this.semiEjeMayor*= factor;
+		this.semiEjeMenor*= factor;
+	}
+
+
 
 }

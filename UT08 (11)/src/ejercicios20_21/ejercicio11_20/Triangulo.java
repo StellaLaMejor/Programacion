@@ -26,6 +26,15 @@ public class Triangulo extends Figura{
 		double semiPerimetro = (perimetro())/2;
 		return Math.sqrt(semiPerimetro*(semiPerimetro-this.lado1)*(semiPerimetro-this.lado2)*(semiPerimetro-this.lado3));
 	}
+
+	@Override
+	public void escalar(double factor) {
+		this.lado1*= factor;
+		this.lado2*= factor;
+		this.lado3*= factor;
+
+		
+	}
 	
 
 }

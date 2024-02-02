@@ -22,5 +22,10 @@ public class PoligonoRegular extends Figura{
 	public double area() {
 		return (this.lado* this.numeroLados* apotema)/2;
 	}
+	@Override
+	public void escalar(double factor) {
+		this.apotema*=factor;
+		
+	}
 
 }
