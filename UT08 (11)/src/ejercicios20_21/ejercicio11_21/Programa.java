@@ -1,4 +1,4 @@
-package ejercicios20_21.ejercicio11_20;
+package ejercicios20_21.ejercicio11_21;
 
 import java.util.Random;
 
@@ -19,6 +19,8 @@ public class Programa {
 			escalable[i].escalar(rdm.nextDouble(3));
 		}
 		mostrarEscalable(escalable);
+		
+		Imagen [] imagenes = new Imagen[10];jfgdl.r
 
 	}
 
