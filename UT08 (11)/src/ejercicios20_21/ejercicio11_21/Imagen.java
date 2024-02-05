@@ -8,27 +8,37 @@ public class Imagen implements Escalable{
 	int ancho;
 	
 	
-	@Override
-	public String toString() {
-		String an = "";
-		String blanco=" ";
-		for (int i = 0; i < this.ancho; i++) {
-			an+= "-";
-			blanco+=blanco;
-		}
-		String al = "";
-		for (int i = 0; i < this.alto; i++) {
-			al+="|\n";
-		}
-		return String.format("%s\n%s %s %s\n %s",an, al, blanco, al, an );
+	public Imagen(int alto, int ancho) {
+		this.alto = alto;
+		this.ancho = ancho;
 	}
 
 
 	@Override
+	 public String toString() {
+	    StringBuilder cuadradoString = new StringBuilder();
+
+        for (int i = 0; i < alto; i++) {
+            for (int j = 0; j < ancho; j++) {
+                if (i == 0 || i == alto - 1) {
+                    cuadradoString.append("- ");
+                } else if (j == 0 || j == ancho - 1) {
+                    cuadradoString.append("| ");
+                } else {
+                    cuadradoString.append("  "); 
+                }
+            }
+            cuadradoString.append("\n");
+        }
+
+        return cuadradoString.toString();
+    }
+
+	@Override
 	public void escalar(double factor) {
-		int factor2=((int) factor);
-		this.alto*=factor2;
-		this.ancho*=factor2;
+		
+		this.alto*=factor;
+		this.ancho*=factor;
 
 	}
 }

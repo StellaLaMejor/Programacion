@@ -20,8 +20,14 @@ public class Programa {
 		}
 		mostrarEscalable(escalable);
 		
-		Imagen [] imagenes = new Imagen[10];jfgdl.r
+		Imagen [] imagenes = new Imagen[10];
 
+		Imagen imagen = new Imagen(10,5);
+		System.out.println(imagen);
+		imagen.escalar(4);
+		System.out.println(imagen);
+
+		
 	}
 
 	private static Figura figuraAleatoria() {
