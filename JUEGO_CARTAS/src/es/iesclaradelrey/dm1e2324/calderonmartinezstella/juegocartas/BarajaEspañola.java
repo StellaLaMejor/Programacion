@@ -9,9 +9,9 @@ public class BarajaEspañola implements Baraja {
 		Carta[] cartas = new Carta[40];
 		int contadorPalo = 0;
 
-		for (int i = 0; i < cartas.length; i++) {
-			for (int j = 0; j < 10; j++) {
-				cartas[i] = new Carta(siguienteNumero(j), siguientePalo(contadorPalo));
+		for (int i = 0; i < 10 ; i++) {
+			for (int j = 0;j<cartas.length; j++) {
+				cartas[j] = new Carta(siguienteNumero(i), siguientePalo(contadorPalo));
 				contadorPalo++;
 			}
 		}
@@ -57,4 +57,15 @@ public class BarajaEspañola implements Baraja {
 		}
 	}
 
+	 @Override
+	    public String toString() {
+	        StringBuilder result = new StringBuilder();
+	        Carta[] baraja = crearBaraja();
+
+	        for (Carta carta : baraja) {
+	            result.append(carta.toString()).append("\n");
+	        }
+
+	        return result.toString();
+	    }
 }

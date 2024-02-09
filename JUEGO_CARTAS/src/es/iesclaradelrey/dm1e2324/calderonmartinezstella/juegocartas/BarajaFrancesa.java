@@ -3,7 +3,7 @@ package es.iesclaradelrey.dm1e2324.calderonmartinezstella.juegocartas;
 public class BarajaFrancesa implements Baraja{
 
 	@Override
-	public Carta[] crearBaraja() {
+	public void crearBaraja() {
 		Carta[] cartas = new Carta[40];
 		int contadorPalo = 0;
 
@@ -13,7 +13,6 @@ public class BarajaFrancesa implements Baraja{
 				contadorPalo++;
 			}
 		}
-		return cartas;
 	}
 
 	@Override

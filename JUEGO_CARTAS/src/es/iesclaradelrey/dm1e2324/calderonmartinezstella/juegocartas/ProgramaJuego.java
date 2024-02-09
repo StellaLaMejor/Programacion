@@ -1,13 +1,18 @@
 package es.iesclaradelrey.dm1e2324.calderonmartinezstella.juegocartas;
 
+import java.util.ArrayList;
+
 public class ProgramaJuego {
 
 	public static void main(String[] args) {
 		
-		BarajaEspañola barajaE = new BarajaEspañola();
+		Baraja barajaE =new BarajaEspañola();
 		
-No estás sabiendo cómo mierdas crear una baraja llena 		
+		System.out.println(barajaE);
 
+
+		
+		
 	}
 
 }

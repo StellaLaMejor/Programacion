@@ -4,4 +4,5 @@ public interface Baraja {
 
 	Carta [] crearBaraja();
 	Palo siguientePalo(int i);
+	
 }
