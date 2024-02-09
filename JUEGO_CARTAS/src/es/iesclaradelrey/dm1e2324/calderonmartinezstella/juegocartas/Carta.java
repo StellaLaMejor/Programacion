@@ -1,14 +1,24 @@
 package es.iesclaradelrey.dm1e2324.calderonmartinezstella.juegocartas;
 
-abstract class Carta extends Baraja{
+public class Carta {
 
-
-	private int numCartas = 0;
 	private int numero;
-	private PaloF paloF;
+	private Palo palo;
+	
+	
+	public Carta(int numero, Palo palo) {
+		this.numero = numero;
+		this.palo = palo;
+	}
 
 
-
+	@Override
+	public String toString() {
+		return String.format("%s (%s) ", this.numero, this.palo); 
+	}
+	
+	
+	
 	
 	
 }
