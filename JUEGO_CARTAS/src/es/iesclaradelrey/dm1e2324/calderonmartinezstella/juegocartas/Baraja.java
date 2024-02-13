@@ -1,8 +1,11 @@
 package es.iesclaradelrey.dm1e2324.calderonmartinezstella.juegocartas;
 
-public interface Baraja {
+import java.util.ArrayList;
 
-	Carta [] crearBaraja();
+public interface Baraja {
+	ArrayList<Carta> getBaraja();
+	void setBaraja(ArrayList<Carta> barajaEditada);
+	ArrayList<Carta> crearBaraja();
 	Palo siguientePalo(int i);
 	
 }

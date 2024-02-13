@@ -1,18 +1,37 @@
 package es.iesclaradelrey.dm1e2324.calderonmartinezstella.juegocartas;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class BarajaFrancesa implements Baraja{
 
-	@Override
-	public void crearBaraja() {
-		Carta[] cartas = new Carta[40];
-		int contadorPalo = 0;
+	ArrayList<Carta> barajaFrancesa= crearBaraja();
 
-		for (int i = 0; i < cartas.length; i++) {
-			for (int j = 0; j < 13; j++) {
-				cartas[i] = new Carta(j+1, siguientePalo(contadorPalo));
-				contadorPalo++;
+	
+	@Override
+	public ArrayList<Carta> getBaraja() {
+		return barajaFrancesa;
+	}
+
+	@Override
+	public void setBaraja(ArrayList<Carta> barajaEditada) {
+		this.barajaFrancesa= barajaEditada;
+		
+	}
+	
+	@Override
+	public ArrayList<Carta> crearBaraja() {
+		ArrayList <Carta> cartas = new ArrayList<Carta>();
+
+
+		for (int i = 0; i < 4 ; i++) {
+			for (int j = 0;j<13; j++) {
+				cartas.add(new Carta((j+1), siguientePalo(i)));
 			}
 		}
+		return cartas;
+		
+
 	}
 
 	@Override
