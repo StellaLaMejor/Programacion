@@ -1,8 +1,21 @@
 package es.iesclaradelrey.dm1e2324.calderonmartinezstella.juegocartas;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class Jugador {
 	
-	String nombre;
-	Carta[] cartas;
+	private Carta[] cartas;
+	private int numJugador;
+	
+	
+	public Jugador(int numJugador) {
+		this.numJugador = numJugador;
+	}
 
+
+
+
+	
+	
 }

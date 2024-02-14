@@ -2,9 +2,9 @@ package es.iesclaradelrey.dm1e2324.calderonmartinezstella.juegocartas;
 
 import java.util.ArrayList;
 
-public class BarajaEspañola implements Baraja {
+public class BarajaEspañola extends Baraja {
 
-	 ArrayList<Carta>  barajaEspaniola= crearBaraja();
+	private ArrayList<Carta>  barajaEspaniola= crearBaraja();
 
 	
 	@Override
@@ -12,11 +12,7 @@ public class BarajaEspañola implements Baraja {
 		return barajaEspaniola;
 	}
 
-	@Override
-	public void setBaraja( ArrayList<Carta>  barajaEditada) {
-		this.barajaEspaniola= barajaEditada;
-		
-	}
+
 	
 	@Override
 	public  ArrayList<Carta>  crearBaraja() {

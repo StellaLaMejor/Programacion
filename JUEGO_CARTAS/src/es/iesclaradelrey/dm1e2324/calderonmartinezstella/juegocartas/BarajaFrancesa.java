@@ -2,10 +2,12 @@ package es.iesclaradelrey.dm1e2324.calderonmartinezstella.juegocartas;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
-public class BarajaFrancesa implements Baraja{
+public class BarajaFrancesa extends Baraja{
 
-	ArrayList<Carta> barajaFrancesa= crearBaraja();
+	private ArrayList<Carta> barajaFrancesa= crearBaraja();
 
 	
 	@Override
@@ -13,11 +15,7 @@ public class BarajaFrancesa implements Baraja{
 		return barajaFrancesa;
 	}
 
-	@Override
-	public void setBaraja(ArrayList<Carta> barajaEditada) {
-		this.barajaFrancesa= barajaEditada;
-		
-	}
+
 	
 	@Override
 	public ArrayList<Carta> crearBaraja() {
@@ -46,6 +44,13 @@ public class BarajaFrancesa implements Baraja{
 		default:
 			return Palo.DIAMANTES;
 		}
+	}
+
+
+
+	@Override
+	public void barajar() {
+		Collections.shuffle(barajaFrancesa);
 	}
 
 }
