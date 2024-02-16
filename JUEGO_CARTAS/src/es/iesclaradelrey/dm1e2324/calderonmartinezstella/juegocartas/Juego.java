@@ -7,22 +7,25 @@ import java.util.List;
 public class Juego {
 
 	private Baraja baraja;
-	private Jugador [] jugador;
+	private Jugador [] jugadores;
 	
 	
 	public Jugador[] getJugador() {
-		return jugador;
+		return jugadores;
 	}
 	public Juego(Baraja baraja, Jugador [] jugador) {
 		this.baraja = baraja;
-		this.jugador = jugador;
+		this.jugadores = jugador;
 	}
 	
 	
 
-	public ArrayList<Carta> repartir (int numeroCartas)
+	public void repartir (int numeroCartas)
 	{
-
+		
+		for (Jugador jugador : jugadores) {
+			jugador = new Jugador()
+		}
 	}
 	
 	

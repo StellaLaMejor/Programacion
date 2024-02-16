@@ -9,6 +9,14 @@ public class Jugador {
 	private int numJugador;
 	
 	
+	
+	public Jugador(Carta[] cartas, int numJugador) {
+		this.cartas = cartas;
+		this.numJugador = numJugador;
+	}
+
+
+
 	public Jugador(int numJugador) {
 		this.numJugador = numJugador;
 	}

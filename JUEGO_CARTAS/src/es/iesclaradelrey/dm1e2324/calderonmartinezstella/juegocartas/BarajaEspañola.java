@@ -1,6 +1,7 @@
 package es.iesclaradelrey.dm1e2324.calderonmartinezstella.juegocartas;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class BarajaEspañola extends Baraja {
 
@@ -64,6 +65,13 @@ public class BarajaEspañola extends Baraja {
 		default:
 			return 12;
 		}
+	}
+
+
+
+	@Override
+	public void barajar() {
+		Collections.shuffle(barajaEspaniola);	
 	}
 
 

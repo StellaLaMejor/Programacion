@@ -7,19 +7,40 @@ public class ProgramaJuego {
 
 	public static void main(String[] args) {
 
-
 		Scanner sc = new Scanner(System.in);
-		String respuesta;
+		String respuestaTipoCartas;
+		Baraja baraja;
 
 		do {
+			System.out.print("Qué tipo de baraja desea jugar (Española (E) / Francesa (F)): ");
+			respuestaTipoCartas = sc.next();
 
-			System.out.println("Qué tipo de baraja desea jugar (Española (E) / Francesa (F))");
-			respuesta = sc.next();
+		} while (!respuestaTipoCartas.equalsIgnoreCase("E") && !respuestaTipoCartas.equalsIgnoreCase("F"));
 
-		} while (!respuesta.equals("E") && !respuesta.equals("F"));
-		
-		Baraja baraja = new BarajaEspañola();
+		if (respuestaTipoCartas.equals("E"))
+			baraja = new BarajaEspañola();
+		else {
+			baraja = new BarajaFrancesa();
+		}
+
+		String respuestaCantidadJugadores;
+
+		boolean correcto = false;
+		int cantidadJugadores;
+		while (!correcto) {
+			try {
+				System.out.printf("Con cuántos judadores quieres jugar (2-6): ");
+				respuestaCantidadJugadores = sc.next();
+				cantidadJugadores = Integer.parseInt(respuestaCantidadJugadores);
+				if (cantidadJugadores < 2 || cantidadJugadores > 6)
+					throw new IllegalArgumentException();
+
+				correcto = true;
+			} catch (IllegalArgumentException a) {
+				System.out.println("El número de jugadores no es válido.");
+			}
+		}
+
 	}
-	
 
 }
