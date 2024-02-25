@@ -5,6 +5,12 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Clase de una Baraja Francesa, extiende de la clase Baraja.
+ * Implementa los métodos abstractos para crear y barajar la baraja francesa.
+ * @author Stella
+ */
+
 public class BarajaFrancesa extends Baraja{
 
 	private ArrayList<Carta> barajaFrancesa= crearBaraja();
@@ -15,12 +21,9 @@ public class BarajaFrancesa extends Baraja{
 		return barajaFrancesa;
 	}
 
-
-	
 	@Override
 	public ArrayList<Carta> crearBaraja() {
 		ArrayList <Carta> cartas = new ArrayList<Carta>();
-
 
 		for (int i = 0; i < 4 ; i++) {
 			for (int j = 0;j<13; j++) {
@@ -28,8 +31,6 @@ public class BarajaFrancesa extends Baraja{
 			}
 		}
 		return cartas;
-		
-
 	}
 
 	@Override
@@ -45,8 +46,6 @@ public class BarajaFrancesa extends Baraja{
 			return Palo.DIAMANTES;
 		}
 	}
-
-
 
 	@Override
 	public void barajar() {

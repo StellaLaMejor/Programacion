@@ -3,31 +3,35 @@ package es.iesclaradelrey.dm1e2324.calderonmartinezstella.juegocartas;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/**
+ * Clase de una Baraja Española, extiende de la clase Baraja. Implementa los
+ * métodos abstractos para crear y barajar la baraja española.
+ * 
+ * @author Stella
+ */
+
 public class BarajaEspañola extends Baraja {
 
-	private ArrayList<Carta>  barajaEspaniola= crearBaraja();
+	private ArrayList<Carta> barajaEspaniola = crearBaraja();
 
-	
 	@Override
-	public  ArrayList<Carta>  getBaraja() {
+	public ArrayList<Carta> getBaraja() {
 		return barajaEspaniola;
 	}
 
-
-	
 	@Override
-	public  ArrayList<Carta>  crearBaraja() {
-		ArrayList <Carta> cartas = new ArrayList<Carta>();
+	public ArrayList<Carta> crearBaraja() {
+		ArrayList<Carta> cartas = new ArrayList<Carta>();
 
-
-		for (int i = 0; i < 4 ; i++) {
-			for (int j = 0;j<10; j++) {
+		for (int i = 0; i < 4; i++) {
+			for (int j = 0; j < 10; j++) {
 				cartas.add(new Carta(siguienteNumero(j), siguientePalo(i)));
 			}
 		}
 		return cartas;
 	}
 
+	@Override
 	public Palo siguientePalo(int i) {
 
 		switch (i) {
@@ -42,6 +46,16 @@ public class BarajaEspañola extends Baraja {
 		}
 	}
 
+	@Override
+	public void barajar() {
+		Collections.shuffle(barajaEspaniola);
+	}
+
+	/**
+	 * 
+	 * @param i
+	 * @return El número siguiente en las cartas.
+	 */
 	private int siguienteNumero(int i) {
 		switch (i) {
 		case 0:
@@ -66,15 +80,4 @@ public class BarajaEspañola extends Baraja {
 			return 12;
 		}
 	}
-
-
-
-	@Override
-	public void barajar() {
-		Collections.shuffle(barajaEspaniola);	
-	}
-
-
-
-
 }
