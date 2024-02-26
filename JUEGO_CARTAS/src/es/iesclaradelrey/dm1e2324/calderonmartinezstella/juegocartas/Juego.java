@@ -75,10 +75,11 @@ public class Juego {
 				System.out.print("Con cuántos jugadores quieres jugar (2-6): ");
 				String respuestaCantidadJugadores = sc.next();
 				numJugadores = Integer.parseInt(respuestaCantidadJugadores);
-				correcto = true;
+				
 				if (numJugadores < 2 || numJugadores > 6) {
 					throw new IllegalArgumentException("El número de jugadores es incorrecto.");
 				}
+				correcto = true;
 			} catch (IllegalArgumentException e) {
 				System.out.println("El número de jugadores no es válido.");
 			}
@@ -101,10 +102,11 @@ public class Juego {
 				System.out.print("¿Cuántas cartas se deben repartir a cada jugador en esta ronda (1-4)? ");
 				String respuestaCantidadCartas = sc.next();
 				numCartasRepartir = Integer.parseInt(respuestaCantidadCartas);
-				correcto = true;
+				
 				if (numCartasRepartir < 1 || numCartasRepartir > 4) {
 					throw new IllegalArgumentException("El número de cartas a repartir no es correcto. ");
 				}
+				correcto = true;
 			} catch (IllegalArgumentException e) {
 				System.out.println("La cantidad de cartas no es válida.");
 			}
