@@ -60,12 +60,13 @@ public class Juego {
 		} while (!correcto);
 		return baraja;
 	}
-	 /**
-     * Método privado para obtener la cantidad de jugadores.
-     *
-     * @param Scanner para la entrada del usuario.
-     * @return Número de jugadores.
-     */
+
+	/**
+	 * Método privado para obtener la cantidad de jugadores.
+	 *
+	 * @param Scanner para la entrada del usuario.
+	 * @return Número de jugadores.
+	 */
 	public static int obtenerCantidadJugadores(Scanner sc) {
 		int numJugadores = 0;
 		boolean correcto = false;
@@ -75,7 +76,7 @@ public class Juego {
 				System.out.print("Con cuántos jugadores quieres jugar (2-6): ");
 				String respuestaCantidadJugadores = sc.next();
 				numJugadores = Integer.parseInt(respuestaCantidadJugadores);
-				
+
 				if (numJugadores < 2 || numJugadores > 6) {
 					throw new IllegalArgumentException("El número de jugadores es incorrecto.");
 				}
@@ -87,12 +88,12 @@ public class Juego {
 		return numJugadores;
 	}
 
-	 /**
-     * Obtiene la cantidad de cartas que se deben repartir a cada jugador.
-     *
-     * @param sc Scanner para la entrada del usuario.
-     * @return Número de cartas a repartir.
-     */
+	/**
+	 * Obtiene la cantidad de cartas que se deben repartir a cada jugador.
+	 *
+	 * @param sc Scanner para la entrada del usuario.
+	 * @return Número de cartas a repartir.
+	 */
 	public int obtenerCantidadCartasRepartir(Scanner sc) {
 		int numCartasRepartir = 0;
 		boolean correcto = false;
@@ -102,7 +103,7 @@ public class Juego {
 				System.out.print("¿Cuántas cartas se deben repartir a cada jugador en esta ronda (1-4)? ");
 				String respuestaCantidadCartas = sc.next();
 				numCartasRepartir = Integer.parseInt(respuestaCantidadCartas);
-				
+
 				if (numCartasRepartir < 1 || numCartasRepartir > 4) {
 					throw new IllegalArgumentException("El número de cartas a repartir no es correcto. ");
 				}
@@ -113,19 +114,21 @@ public class Juego {
 		} while (!correcto);
 		return numCartasRepartir;
 	}
+
 	/**
-     * Muestra el resultado parcial de la ronda actual
-     *
-     * @param jugadores Arreglo de jugadores en la partida.
-     */
+	 * Muestra el resultado parcial de la ronda actual
+	 *
+	 * @param jugadores Arreglo de jugadores en la partida.
+	 */
 	public void mostrarResultadoParcial(Jugador[] jugadores) {
 		int maxPuntuacion = Integer.MIN_VALUE;
 		Jugador ganador = null;
-
+		int i = 1;
 		System.out.println("Resultados parciales:");
 		for (Jugador jugador : jugadores) {
 			int puntuacion = jugador.calcularPuntuacion();
-			System.out.println(jugador.toString() + " - Puntuación: " + puntuacion);
+			System.out.println("Jugador " + i +" --> "+ puntuacion + " puntos.");
+			i++;
 
 			if (puntuacion > maxPuntuacion) {
 				maxPuntuacion = puntuacion;
@@ -136,12 +139,12 @@ public class Juego {
 		System.out.println("El jugador " + ganador.getNumJugador() + " va ganando con " + maxPuntuacion + " puntos.");
 		System.out.println("-".repeat(100));
 	}
-	
-	 /**
-     * Muestra el resultado final de la partida
-     *
-     * @param jugadores Jugadores de la partida.
-     */
+
+	/**
+	 * Muestra el resultado final de la partida
+	 *
+	 * @param jugadores Jugadores de la partida.
+	 */
 
 	private void mostrarResultadoFinal(Jugador[] jugadores) {
 		Arrays.sort(jugadores, Comparator.comparingInt(Jugador::calcularPuntuacion).reversed());
@@ -150,20 +153,21 @@ public class Juego {
 
 		for (int i = 0; i < jugadores.length; i++) {
 			Jugador jugador = jugadores[i];
-			System.out.println("Posición " + (i + 1) + ": " + jugador.toString() + " - Puntuación: "
+			System.out.println( jugador.toString() + " - Puntuación: "
 					+ jugador.calcularPuntuacion());
 		}
 
 		System.out.println("El ganador es el jugador " + jugadores[0].getNumJugador() + " con "
 				+ jugadores[0].calcularPuntuacion() + " puntos.");
 	}
+
 	/**
-     * Reparte un número específico de cartas a cada jugador en la ronda actual.
-     *
-     * @param jugadores Arreglo de jugadores a los que se les repartirán las cartas.
-     * @param baraja Baraja utilizada para el reparto.
-     * @param numCartas Número de cartas a repartir.
-     */
+	 * Reparte un número específico de cartas a cada jugador en la ronda actual.
+	 *
+	 * @param jugadores Arreglo de jugadores a los que se les repartirán las cartas.
+	 * @param baraja    Baraja utilizada para el reparto.
+	 * @param numCartas Número de cartas a repartir.
+	 */
 	public void repartirCartas(Jugador[] jugadores, Baraja baraja, int numCartas) {
 		for (Jugador jugador : jugadores) {
 			for (int i = 0; i < numCartas; i++) {
@@ -174,11 +178,12 @@ public class Juego {
 			}
 		}
 	}
-	 /**
-     * Reparte un número de cartas a cada jugador
-     *
-     * @param numeroCartas Número de cartas a repartir a cada jugador
-     */
+
+	/**
+	 * Reparte un número de cartas a cada jugador
+	 *
+	 * @param numeroCartas Número de cartas a repartir a cada jugador
+	 */
 	public void repartir(int numeroCartas) {
 		int numJugadores = jugadores.length;
 		int cartasRepartidas = 0;
@@ -192,12 +197,14 @@ public class Juego {
 			}
 		}
 	}
+
 	/**
-     * Inicia el juego gestionando las rondas, el barajado y el reparto de cartas hasta que la baraja se agote.
-     *
-     * @param Scanner para la entrada del usuario.
-     * @param numJugadores Número de jugadores en la partida.
-     */
+	 * Inicia el juego gestionando las rondas, el barajado y el reparto de cartas
+	 * hasta que la baraja se agote.
+	 *
+	 * @param Scanner      para la entrada del usuario.
+	 * @param numJugadores Número de jugadores en la partida.
+	 */
 	public void iniciarJuego(Scanner sc, int numJugadores) {
 
 		Jugador[] jugadores = new Jugador[numJugadores];
