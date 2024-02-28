@@ -26,6 +26,7 @@ public class Camion extends VehiculoTerrestre implements Motorizado, Matriculabl
 
 	@Override
 	public String getMatricula() {
+		
 		return this.matricula;
 	}
 
