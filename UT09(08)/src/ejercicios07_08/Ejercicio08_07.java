@@ -7,6 +7,8 @@ public class Ejercicio08_07 {
 
 	public static void main(String[] args) {
 
+		
+		falta el 2
 		LinkedList<String> nombres = new LinkedList<String>();
 
 		nombres.add("hola");
