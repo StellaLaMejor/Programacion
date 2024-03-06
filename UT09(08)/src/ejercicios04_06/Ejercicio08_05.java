@@ -43,17 +43,13 @@ public class Ejercicio08_05 {
 		
 		List <Integer> resultado = new ArrayList<Integer>();
 		
-		for (Integer numero : resultado) {
-			if(!sustraendo.contains(numero)){
-				if(!resultado.contains(numero))
-				{
+		for (Integer numero : minuendo) {
+			if(!sustraendo.contains(numero)){	
 					resultado.add(numero);
-				}
 			}	
-			
 		}
 		return resultado;
-		esto no me sale como me tiene que salir 
+		
 	}
 
 }
