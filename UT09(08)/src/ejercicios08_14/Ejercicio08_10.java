@@ -7,6 +7,7 @@ import java.util.Map;
 import java.util.Random;
 
 public class Ejercicio08_10 {
+	falta el ejercicio 11 y hacer este mamona
 
 	private static final int CANTIDAD_NUM = 1000;
 	private static final int NUM_MIN = 1;
