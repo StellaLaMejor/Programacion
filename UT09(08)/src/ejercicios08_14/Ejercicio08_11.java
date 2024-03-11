@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Random;
 import java.util.Map.Entry;
 
-public class Ejercicio08_10 {
+public class Ejercicio08_11 {
 
 	private static final int CANTIDAD_NUM = 1000;
 	private static final int NUM_MIN = 1;
@@ -44,7 +44,7 @@ public class Ejercicio08_10 {
 		Collections.sort(listaEntradas, new Comparator<Map.Entry<Integer,Integer>>() {
 			@Override
 			public int compare(Entry<Integer, Integer> o1, Entry<Integer, Integer> o2) {
-				return o1.getValue().compareTo(o2.getValue());
+				return -o1.getValue().compareTo(o2.getValue());
 			}
 		});
 		

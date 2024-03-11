@@ -8,6 +8,8 @@ import java.util.TreeMap;
 
 public class Ejercicio08_12 {
 
+	
+	private static final int [] NUMEROS_DIVISIBLESS= {2,3,5,7};
 	private static final int MAX_RANDOM = 10;
 	private static final int CANTIDAD_NUMEROS = 100;
 	
@@ -28,13 +30,17 @@ public class Ejercicio08_12 {
 
 
 		for (Integer numero : lista) {
-			if(numero % 2==0) {
-				if(mapita.containsKey(2)) {
-					List<Integer> a = mapita.get(2);
-					a.add(numero);
-				}
-				else {
-					mapita.put(2, new LinkedList<Integer>(List.of(numero)));
+			for (int i = 0; i < NUMEROS_DIVISIBLESS.length; i++) {
+
+				if(numero % NUMEROS_DIVISIBLESS[i] ==0) {
+					if(mapita.containsKey(NUMEROS_DIVISIBLESS[i])) {
+						List<Integer> a = mapita.get(NUMEROS_DIVISIBLESS[i]);
+						if(!a.contains(numero))
+							a.add(numero);
+					}
+					else {
+						mapita.put(NUMEROS_DIVISIBLESS[i], new LinkedList<Integer>(List.of(numero)));
+					}
 				}
 			}
 		}
