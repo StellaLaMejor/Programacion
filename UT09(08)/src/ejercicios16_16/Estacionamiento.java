@@ -34,12 +34,12 @@ public class Estacionamiento {
 
 	public ResultadoEstacionamiento estacionarVehiculo(String matricula) {
 		if (estacionados.containsKey(matricula)) {
-			throw new IllegalArgumentException(
+			throw new VehiculoYaEstacionado(
 					String.format("El vehículo con la matrícula <%s> ya está estacionado", this.matricula));
 		}
 		if (esperando.contains(matricula)) {
-			throw new IllegalStateException(
-					String.format("El vehículo con la matrícula <%s>está esperando en la cola", this.matricula));
+			throw new VehiculoEsperandoColaNoEstacionar(
+					String.format("El vehículo con la matrícula <%s> está esperando en la cola", this.matricula));
 		}
 		if (estacionados.size() < numPlaza) {
 			estacionados.put(matricula, LocalDateTime.now());
@@ -55,12 +55,12 @@ public class Estacionamiento {
 
 	public double retirarVehiculo(String matricula) {
 		if (!estacionados.containsKey(matricula) && !esperando.contains(matricula)) {
-			throw new IllegalArgumentException(
+			throw new VehiculoNoEstaEnEstacionamiento(
 					String.format("El vehículo con la matrícula <%s> no está en el estacionamiento.", this.matricula));
 		}
 		if (!estacionados.containsKey(matricula) && esperando.contains(matricula)) {
-			throw new IllegalArgumentException(String.format(
-					"No se puede retirar el vehículo con matrícula <%s> porque no ha accedido aún al estacionamiento. Está esperando para acceder.”",
+			throw new VehiculoEsperandoNoSePuedeRetirar(String.format(
+					"No se puede retirar el vehículo con matrícula <%s> porque no ha accedido aún al estacionamiento. Está esperando para acceder.",
 					this.matricula));
 		}
 		
