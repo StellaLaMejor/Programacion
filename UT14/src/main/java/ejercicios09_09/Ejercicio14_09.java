@@ -13,7 +13,7 @@ public class Ejercicio14_09 {
     private static final String DML_CREATE_COUNTRY ="insert into country(country) values(?)";
     private static final String DML_CREATE_CITY ="insert into city(city, city_id) values(?,?)";
 
-    faltan cosas
+  //  faltan cosas
 
     public static void main(String[] args) {
 
