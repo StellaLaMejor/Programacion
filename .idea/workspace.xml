@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92dd2aac-ecce-40b7-be3c-27ebae981477" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ejercicios12_15/ejercicio12_14/entities/Actor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ejercicios12_15/ejercicio12_14/entities/Film.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ejercicios12_15/ejercicio12_14/entities/scratch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/26a70c15-f972-416b-bd12-d4e5e8c8e91e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/26a70c15-f972-416b-bd12-d4e5e8c8e91e.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e3c7cd3d-e1a3-467c-8f19-d7cbb6bd9ebc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e3c7cd3d-e1a3-467c-8f19-d7cbb6bd9ebc/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +35,7 @@
     "full.screen.before.presentation.mode": "false",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Vespertino/Desktop/Programación/Programacion/UT14",
+    "last_opened_file_path": "C:/Users/Stella/Desktop/Programación/Programacion/Programacion",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -74,26 +71,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="Programacion" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="Programacion" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
         <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
-        <option value="jdk-22-openjdk-22-3183f394aec4-bad0321e" />
-        <option value="jdk-22-openjdk-22-4caba194b151-f504ca98" />
       </set>
     </attachedChunks>
   </component>
@@ -113,6 +95,8 @@
       <workItem from="1712167939291" duration="614000" />
       <workItem from="1712168566995" duration="9000" />
       <workItem from="1712240539255" duration="1833000" />
+      <workItem from="1712283371728" duration="16000" />
+      <workItem from="1712283444088" duration="11000" />
     </task>
     <servers />
   </component>
