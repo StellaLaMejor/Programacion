@@ -24,17 +24,10 @@ public class Programa {
 
 
         List<ActorInFilm> actoresInFilms = actorInFilmDao.getAll();
-        List<Film> films = filmDao.getAll();
+        Map<Integer, Actor> actoresMap = actorDao.getAll();
+        Map<Integer, Film> filmMap= filmDao.getAll();
 
-
-        for (Actor actor : actores) {
-            System.out.printf("%s, %s (%d)\n", actor.getFirstName(), actor.getLastName(), actor.getActorId());
-        }
-
-       for (ActorInFilm actorInFilm : actoresInFilms) {
-            System.out.printf("ID PELÍCULA = %d | ID ACTOR = %d\n", actorInFilm.getFilmId(), actorInFilm.getActorId());
-       }
-
+        while(actoresMap.)
 
 
     }

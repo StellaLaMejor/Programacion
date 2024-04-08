@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ActorInFilmDao {
-//Sin terminar
+
     private final String connectionString;
     private final String username;
     private final String password;
@@ -21,7 +21,7 @@ public class ActorInFilmDao {
     }
 
 
-    public Map<ActorInFilm> getAll() throws SQLException {
+    public List<ActorInFilm> getAll() throws SQLException {
 
         List<ActorInFilm> actoresEnPelis = new ArrayList<>();
         try (Connection connection = DriverManager.getConnection(connectionString, username, password);
