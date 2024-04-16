@@ -1,0 +1,8 @@
+1709744993039	Extract constant 'NUM_MAX'
+1709745005702	Extract constant 'NUM_MIN'
+1709745017428	Extract constant 'CANTIDAD_NUM'
+1709746011677	Extract local variable 'numero'
+1709749569618	Copy compilation unit
+1709831143139	Rename package 'ejercicio_pila'
+1709831874686	Extract constant 'CANTIDAD_NUMEROS'
+1709832134055	Extract constant 'MAX_RANDOM'

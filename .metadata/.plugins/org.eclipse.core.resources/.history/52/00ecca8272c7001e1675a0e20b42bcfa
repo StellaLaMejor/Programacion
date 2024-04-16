@@ -1,0 +1,8 @@
+package es.iesclaradelrey.dm1e2324.calderonmartinezstella.juegocartas;
+
+public interface Baraja {
+
+	void crearBaraja();
+	Palo siguientePalo(int i);
+	String toString();
+}

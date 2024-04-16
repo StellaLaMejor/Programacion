@@ -1,0 +1,11 @@
+package ejercicios16_16;
+
+public class Estacionamiento {
+
+	private int numeroPlaza;
+	private int tiempoCortesia;
+	private int precioSegundo;
+	private ResultadoEstacionamiento resultadoEstacionamiento;
+	
+	
+}

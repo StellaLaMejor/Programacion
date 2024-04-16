@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract constant &apos;NUMERO_ALUMNOS&apos; from expression &apos;10&apos;&#x0D;&#x0A;- Original project: &apos;UT09(08)&apos;&#x0D;&#x0A;- Constant name: &apos;NUMERO_ALUMNOS&apos;&#x0D;&#x0A;- Constant expression: &apos;10&apos;&#x0D;&#x0A;- Declared visibility: &apos;private&apos;" description="Extract constant &apos;NUMERO_ALUMNOS&apos;" flags="786432" id="org.eclipse.jdt.ui.extract.constant" input="/src=/optional=/true=/=/maven.pomderived=/true=/&lt;ejercicios01_02.ejercicio08_02{Programa.java" name="NUMERO_ALUMNOS" qualify="false" replace="false" selection="326 2" stamp="1708530834966" version="1.0" visibility="2"/>
+</session>
