@@ -27,6 +27,12 @@ public class Ejercicio07 {
             return;
         }
 
+        ficheroCharAleatorios(nombreFichero);
+
+
+    }
+
+    private static void ficheroCharAleatorios(Path nombreFichero) throws IOException {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(nombreFichero.toFile()))) {
 
             List<Character> listaRndChar = new ArrayList<>();
@@ -45,8 +51,5 @@ public class Ejercicio07 {
             }
 
         }
-
-
-
     }
 }
