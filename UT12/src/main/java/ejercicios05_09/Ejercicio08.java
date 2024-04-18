@@ -49,18 +49,19 @@ public class Ejercicio08 {
                         writer.write(caracter2);
                         caracter2 = reader2.read();
                     }
+                if(caracter1 ==-1){
+                    do{
+                        writer.write(caracter2);
+                    }while ((caracter2 = reader2.read()) != -1);
+                }
+                if(caracter2==-1){
+                    do{
+                        writer.write(caracter1);
+                    }while ((caracter1 = reader1.read()) != -1);
+                }
+
             }
 
-            if(caracter1 ==-1){
-                do{
-                    writer.write(caracter2);
-                }while ((caracter2 = reader2.read()) != -1);
-            }
-            if(caracter2==-1){
-                do{
-                    writer.write(caracter1);
-                }while ((caracter1 = reader1.read()) != -1);
-            }
 
         }
 
