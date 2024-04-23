@@ -9,7 +9,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class ProgramaPrincipal {
-    Está todo mal xdddd
+//    Está todo mal xdddd
     private static final Path FICHERO_MEDIA= Path.of("Desktop","PruebasFicheros",  "Ejercicio12_10", "FicheroMedia.txt");
     private static final Path FICHERO_INFORME= Path.of("Desktop","PruebasFicheros",  "Ejercicio12_10", "FicheroMediaInforme.txt");
 
@@ -17,7 +17,7 @@ public class ProgramaPrincipal {
 
     public static void main(String[] args) throws FileNotFoundException {
 
-        Media media = MediaUtilities();
+//        Media media = MediaUtilities();
 
         List<Media> mediaList= leerMediaDeFichero (FICHERO_MEDIA);
 
@@ -28,7 +28,7 @@ public class ProgramaPrincipal {
 
         }
 
-        System.out.println( newRandomMedia(5));
+//        System.out.println( newRandomMedia(5));
 
     }
 
