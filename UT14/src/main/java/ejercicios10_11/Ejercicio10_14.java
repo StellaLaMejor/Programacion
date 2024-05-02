@@ -9,7 +9,7 @@ public class Ejercicio10_14 {
     public static final String PWD= "pwdsakilauser";
     public static final String QUERY= "select country_id, country from country where country ='?'";
     private static final String UPDATE_PAIS = "update country set country='?' where country = '?'";
-HAY ALGO QUE ESTÁ MAL, ME PONE QUE NO EXISTE NINGÚN PAÍS
+//HAY ALGO QUE ESTÁ MAL, ME PONE QUE NO EXISTE NINGÚN PAÍS
     public static void main(String[] args) throws SQLException {
 
         Scanner sc= new Scanner(System.in);

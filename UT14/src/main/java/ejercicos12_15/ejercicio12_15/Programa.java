@@ -27,7 +27,7 @@ public class Programa {
         Map<Integer, Actor> actoresMap = actorDao.getAll();
         Map<Integer, Film> filmMap= filmDao.getAll();
 
-        while(actoresMap.)
+  //      while(actoresMap.)
 
 
     }
