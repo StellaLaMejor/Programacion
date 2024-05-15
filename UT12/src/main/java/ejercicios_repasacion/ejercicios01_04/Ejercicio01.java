@@ -9,12 +9,12 @@ public class Ejercicio01 {
 
     public static void main(String[] args) throws IOException {
 
-        File ficherosDePruebaBorrar = new File(String.valueOf(FICHERO_BORRAR.toFile()));
-        if (!ficherosDePruebaBorrar.mkdirs()) {
-            ficherosDePruebaBorrar.createNewFile();
-
+        File ficherosDePruebaBorrar = new File(FICHERO_BORRAR.toString());
+        if (!ficherosDePruebaBorrar.createNewFile()) {
+            System.out.println("No se ha podido crear el fichero");
         }
-       ficherosDePruebaBorrar.delete();
+
+     ficherosDePruebaBorrar.delete();
 
 //  así se saca la ruta del escritorio.
         String s = System.getProperty("user.home") + File.separator + "Desktop";
