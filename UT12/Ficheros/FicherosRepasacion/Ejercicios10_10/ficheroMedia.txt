@@ -1,0 +1,10 @@
+1|The Power of the Dog|Emily Klocko|O'Kon, Koepp and Kohler|2008-12-23|MUSICA
+2|Dune|Stanford Maggio|Glover-Cronin|2008-01-07|MUSICA
+3|Dune|Quentin Wilkinson|Spinka, Oberbrunner and Johnson|2015-10-28|PELICULA
+4|Children of Deaf Adults|Bud Durgan|Batz, Ratke and Keeling|2023-02-26|MUSICA
+5|Lady Bird|Mrs. Sidney Fay|Hartmann-Ortiz|2006-03-26|PELICULA
+6|Lady Bird|Demetrius Balistreri|Shields LLC|2018-06-19|PELICULA
+7|Marriage Story|Jeana Hermann|Heathcote-Schmitt|2011-02-27|MUSICA
+8|Darkest Hour|Phillip Koelpin|Glover Inc|2013-07-15|PELICULA
+9|The Wolf of Wall Street|Bok Pagac Group|Graham, Osinski and Satterfield|2006-03-16|MUSICA
+10|Dallas Buyers Club|Michaela Christiansen|Leuschke, Bahringer and Grant|2021-10-29|MUSICA
